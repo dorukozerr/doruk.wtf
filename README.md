@@ -1,7 +1,7 @@
 ### doruk.wtf
 
-I really don't know what to put in to this file, I'm building my personal website and I just hope to finish it this time.
+Welcome to my personal website source code.
 
----
+There will be or there is (depending on the time you're reading this) some P5.js, tailwind and React stuff in this project.
 
 Made with <3
