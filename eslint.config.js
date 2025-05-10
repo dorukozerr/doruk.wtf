@@ -30,7 +30,19 @@ export default tseslint.config(
       ],
       'arrow-body-style': 'error',
       'prefer-arrow-callback': 'error',
-      'no-console': ['error', { allow: ['error'] }]
+      'no-console': ['error', { allow: ['error'] }],
+      '@typescript-eslint/no-unused-vars': [
+        'error',
+        {
+          args: 'all',
+          argsIgnorePattern: '^_',
+          caughtErrors: 'all',
+          caughtErrorsIgnorePattern: '^_',
+          destructuredArrayIgnorePattern: '^_',
+          varsIgnorePattern: '^_',
+          ignoreRestSiblings: true
+        }
+      ]
     }
   }
 );
