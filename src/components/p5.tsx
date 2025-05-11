@@ -57,7 +57,7 @@ export const P5Scene = () => {
     p5.fill(122.5);
     p5.beginShape();
     for (let x = 0; x <= width; x += 10) {
-      const magnifierValue = p5.map(proximity, 0, 1, 5, 2.5);
+      const magnifierValue = p5.map(proximity, 0, 1, 20, 2.5);
       const y = p5.map(
         p5.noise(xoff2, yOff),
         0,
@@ -78,7 +78,7 @@ export const P5Scene = () => {
     circleSizes.forEach((size, index) => {
       const rgbValue = rgbValues[index];
       const alphaValue = isHovered
-        ? p5.map(p5.noise(xoff2, yOff), 0, 1, 255, 255 / 2)
+        ? p5.map(p5.noise(xoff2, yOff), 0, 1, 255, 0)
         : alphaValues[index];
       p5.fill(rgbValue, rgbValue, rgbValue, alphaValue);
       p5.circle(width / 2, height / 2, size);
@@ -88,12 +88,12 @@ export const P5Scene = () => {
     p5.fill(0);
     p5.beginShape();
     for (let x = 0; x <= width; x += 10) {
-      const magnifierValue = p5.map(proximity, 0, 1, 0.8, 0.4);
+      const magnifierValue = p5.map(proximity, 0, 1, 1, 0.4);
       const y = p5.map(
         p5.noise(xoff3, yOff),
         0,
         magnifierValue,
-        height / 6,
+        height / 24,
         height
       );
       p5.vertex(x, y);
