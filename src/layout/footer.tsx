@@ -1,5 +1,5 @@
 export const Footer = () => (
-  <header className='fixed bottom-0 left-0 z-20 flex min-h-32 w-full items-center justify-center text-white'>
-    <h6>Footer</h6>
+  <header className='fixed bottom-4 left-1/2 z-20 flex -translate-x-1/2 rounded-md bg-gradient-to-r from-white/10 to-black/50 px-8 py-4 backdrop-blur-2xl'>
+    <span className='font-mono text-white'>Made with 🔥</span>
   </header>
 );
