@@ -32,8 +32,7 @@
     "react-dom": "^19.1.0",
     "react-p5": "^1.4.1",
     "react-router-dom": "^7.6.0",
-    "tailwindcss": "^4.1.6",
-    "zustand": "^5.0.4"
+    "tailwindcss": "^4.1.6"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",
