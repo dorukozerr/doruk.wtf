@@ -10,13 +10,11 @@ export const Layout = () => {
   const currentOutlet = useOutlet();
 
   return (
-    <div className='flex h-full w-full flex-col items-start justify-start bg-black'>
+    <div className='flex h-full w-full flex-col items-start justify-start overflow-hidden bg-black'>
       <Header />
-      <main className='relative z-10 h-max w-full'>
-        <AnimatePresence initial={false} mode='wait'>
-          {cloneElement(currentOutlet ?? <div />, { key: location.pathname })}
-        </AnimatePresence>
-      </main>
+      <AnimatePresence initial={false} mode='wait'>
+        {cloneElement(currentOutlet ?? <div />, { key: location.pathname })}
+      </AnimatePresence>
       <Footer />
     </div>
   );

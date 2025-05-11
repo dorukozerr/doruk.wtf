@@ -9,14 +9,14 @@ export const Home = () => (
     initial='enter'
     animate='center'
     exit='exit'
-    className='flex w-full flex-col items-center justify-center gap-24 bg-green-500'
+    className='flex h-full w-full flex-col items-start justify-start gap-24 overflow-auto'
   >
     <h1 className='text-5xl font-extrabold text-white'>Home Page</h1>
-    <div className='h-[900px] w-60 bg-black'></div>
-    <div className='h-[900px] w-60 bg-black'></div>
-    <div className='h-[900px] w-60 bg-black'></div>
-    <div className='h-[900px] w-60 bg-black'></div>
-    <div className='h-[900px] w-60 bg-black'></div>
-    <div className='h-[900px] w-60 bg-black'></div>
+    <div className='min-h-[900px] w-60 bg-black'></div>
+    <div className='min-h-[900px] w-60 bg-black'></div>
+    <div className='min-h-[900px] w-60 bg-black'></div>
+    <div className='min-h-[900px] w-60 bg-black'></div>
+    <div className='min-h-[900px] w-60 bg-black'></div>
+    <div className='min-h-[900px] w-60 bg-black'></div>
   </motion.div>
 );
