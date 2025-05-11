@@ -1,17 +1,15 @@
-import { createBrowserRouter, Outlet } from 'react-router-dom';
+import { createBrowserRouter } from 'react-router-dom';
 
 import { Layout } from '~/layout';
+import { Home } from '~/pages/home';
+import { Portfolio } from '~/pages/portfolio';
 
 export const router = createBrowserRouter([
   {
-    element: (
-      <Layout>
-        <Outlet />
-      </Layout>
-    ),
+    element: <Layout />,
     children: [
-      { path: '/', element: <h1>Home Page</h1> },
-      { path: '/portfolio', element: <h1>Portfolio Page</h1> }
+      { path: '/', element: <Home /> },
+      { path: '/portfolio', element: <Portfolio /> }
     ]
   }
 ]);
