@@ -16,8 +16,8 @@ export const Projects = () => (
         <h2 className='text-center text-5xl text-white'>Wall of Shame</h2>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
         <h5 className='text-center text-xl font-light text-white/50'>
-          I'm quite surprised you want to inspect my projects, don't let me stop
-          you here you go.
+          I'm quite surprised you want to inspect my projects Don't let me stop
+          you, here you go.
         </h5>
       </div>
     </section>
@@ -26,7 +26,7 @@ export const Projects = () => (
         <h3 className='text-3xl text-white'>doruk.wtf</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
         <p className='text-center font-light text-white/50'>
-          The first project to list here ofcourse is this site, here is the
+          The first project to list here of course is this site, here is the
           github{' '}
           <a
             href='https://github.com/dorukozerr/doruk.wtf'
@@ -47,15 +47,15 @@ export const Projects = () => (
           I'm really proud of this one, I somehow managed to develop a AI Vim
           plugin. You can select any provider or model you want (I mean
           anthropic, openai, google) then you can chat with it in a Vim buffer.
-          Features added are, marking code blocks or files for your next prompt,
+          Features added are marking code blocks or files for your next prompt,
           persisten multi session history and like I said multi model support.
           AI and session history stuff is handled by TypeScript server process,
-          through stdin and stout communication stringified json payloads
+          through stdin and stdout communication stringified json payloads
           getting passed to Vim buffer and TypeScript server. Each side has some
-          handler methods for receiving and using the incoming paylods, this
-          stuff is called standard streams learned that in the midway. For the
-          chat buffer and simple plugin menu Vim Script is used. It's not much
-          but I like using it anyway here is the{' '}
+          handler methods for receiving and using the incoming paylods. This
+          stuff is called standard streams. I learned that along the way. For
+          the chat buffer and simple plugin menu Vim Script is used. It's not
+          much but I like using it anyway here is the{' '}
           <a
             href='https://github.com/dorukozerr/kisuke.vim'
             target='_blank'

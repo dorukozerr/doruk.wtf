@@ -26,11 +26,11 @@ export const Home = () => (
         <h3 className='text-3xl text-white'>The Promised Content</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
         <p className='text-center text-lg font-light text-white/50'>
-          Sorry to say this but I'm suck at writing, even if I try 24 hours
-          straight I can't come up with something meaningful to write here, also
-          I don't wanna use some AI generated content. Maybe look into projects
-          section and inspect my source codes then contact me, that would be
-          nice.
+          Sorry to say this, but I suck at writing, even if I try 24 hours
+          straight I can't come up with something meaningful to write here.
+          Also, I don't want to use some AI-generated content. Maybe look into
+          projects section and inspect my source codes then contact me, that
+          would be nice.
         </p>
       </div>
     </section>
