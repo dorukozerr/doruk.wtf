@@ -2,6 +2,7 @@ import { cloneElement } from 'react';
 import { useLocation, useOutlet } from 'react-router-dom';
 import { AnimatePresence } from 'motion/react';
 
+import { P5Scene } from '~/components/p5';
 import { Header } from '~/layout/header';
 import { Footer } from '~/layout/footer';
 
@@ -10,7 +11,10 @@ export const Layout = () => {
   const currentOutlet = useOutlet();
 
   return (
-    <div className='flex h-full w-full flex-col items-start justify-start overflow-hidden bg-black'>
+    <div className='z-20 flex h-full w-full flex-col items-start justify-start overflow-hidden'>
+      <div className='absolute h-full w-full'>
+        <P5Scene />
+      </div>
       <Header />
       <AnimatePresence initial={false} mode='wait'>
         {cloneElement(currentOutlet ?? <div />, { key: location.pathname })}
