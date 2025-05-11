@@ -23,7 +23,7 @@ export const Contact = () => (
   >
     <section className='flex min-h-dvh w-full items-center justify-center'>
       <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h2 className='text-center text-5xl font-light text-white'>Socials</h2>
+        <h2 className='text-center text-5xl text-white'>Socials</h2>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
         <div className='flex items-center justify-center gap-4'>
           <a href='https://github.com/dorukozerr/' target='_blank'>

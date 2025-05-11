@@ -13,11 +13,9 @@ export const Projects = () => (
   >
     <section className='flex min-h-dvh w-full items-center justify-center'>
       <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h2 className='text-center text-5xl font-light text-white'>
-          Wall of Shame
-        </h2>
+        <h2 className='text-center text-5xl text-white'>Wall of Shame</h2>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-        <h5 className='text-center text-xl font-extralight text-white/50'>
+        <h5 className='text-center text-xl font-light text-white/50'>
           I'm quite surprised you want to inspect my projects, don't let me stop
           you here you go.
         </h5>
@@ -25,9 +23,9 @@ export const Projects = () => (
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
       <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h3 className='text-3xl font-light text-white'>doruk.wtf</h3>
+        <h3 className='text-3xl text-white'>doruk.wtf</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-        <p className='text-center font-extralight text-white/50'>
+        <p className='text-center font-light text-white/50'>
           The first project to list here ofcourse is this site, here is the
           github{' '}
           <a
@@ -43,9 +41,9 @@ export const Projects = () => (
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
       <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h3 className='text-3xl font-light text-white'>kisuke.vim</h3>
+        <h3 className='text-3xl text-white'>kisuke.vim</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-        <p className='text-center font-extralight text-white/50'>
+        <p className='text-center font-light text-white/50'>
           I'm really proud of this one, I somehow managed to develop a AI Vim
           plugin. You can select any provider or model you want (I mean
           anthropic, openai, google) then you can chat with it in a Vim buffer.
@@ -71,9 +69,9 @@ export const Projects = () => (
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
       <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h3 className='text-3xl font-light text-white'>Video Diary App</h3>
+        <h3 className='text-3xl text-white'>Video Diary App</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-        <p className='text-center font-extralight text-white/50'>
+        <p className='text-center font-light text-white/50'>
           A case study I did for a place I applied. Basic video saving and
           editing application made with react native. Created a custom scrubber
           and connected it to video player play, pause, seek events so it acted
@@ -94,9 +92,9 @@ export const Projects = () => (
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
       <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h3 className='text-3xl font-light text-white'>uWuallet</h3>
+        <h3 className='text-3xl text-white'>uWuallet</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-        <p className='text-center font-extralight text-white/50'>
+        <p className='text-center font-light text-white/50'>
           An expense tracker app built just for practicing nextjs app router and
           server actions. UI is super simple. There authentication and app pages
           only. Every user can create transactions as both expense or income and
@@ -118,9 +116,9 @@ export const Projects = () => (
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
       <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h3 className='text-3xl font-light text-white'>Real Estate App</h3>
+        <h3 className='text-3xl text-white'>Real Estate App</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-        <p className='text-center font-extralight text-white/50'>
+        <p className='text-center font-light text-white/50'>
           Another CRUD app with nextjs. Practiced pre-rendering on build time
           for SEO with this. Implemented admin panel that has advanced form
           handling with zod and react hook form. CRUD operations on entries can
