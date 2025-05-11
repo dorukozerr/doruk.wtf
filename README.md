@@ -4,21 +4,21 @@ Welcome to the repository for my personal website, [doruk.wtf](https://doruk.wtf
 
 ## Tech Stack
 
-• **Frontend Framework**: React 19 with TypeScript
-• **Build Tool**: Vite
-• **Styling**: TailwindCSS
-• **Routing**: React Router v7
-• **Animations**: Motion (formerly Framer Motion)
-• **Creative Canvas**: P5.js with react-p5
-• **Code Quality**: ESLint, Prettier
+- **Frontend Framework**: React 19 with TypeScript
+- **Build Tool**: Vite
+- **Styling**: TailwindCSS
+- **Routing**: React Router v7
+- **Animations**: Motion (formerly Framer Motion)
+- **Creative Canvas**: P5.js with react-p5
+- **Code Quality**: ESLint, Prettier
 
 ## Features
 
-• Interactive P5.js background scene that responds to mouse proximity
-• Context-based state management for window dimensions and mouse position
-• Smooth page transitions with Motion animations
-• Responsive design with TailwindCSS
-• Custom navigation with route-based component rendering
+- Interactive P5.js background scene that responds to mouse proximity
+- Context-based state management for window dimensions and mouse position
+- Smooth page transitions with Motion animations
+- Responsive design with TailwindCSS
+- Custom navigation with route-based component rendering
 
 ## Project Structure
 
@@ -45,18 +45,18 @@ doruk.wtf/
 
 The website features an interactive background animation created with P5.js that responds to user interaction. The main scene in `components/p5.tsx` includes:
 
-• Dynamic waves that react to mouse proximity
-• Fibonacci-inspired circular patterns
-• Responsive canvas that adapts to window dimensions
-• Custom noise-based animations
+- Dynamic waves that react to mouse proximity
+- Fibonacci-inspired circular patterns
+- Responsive canvas that adapts to window dimensions
+- Custom noise-based animations
 
 ### Context-Based State Management
 
 Multiple React contexts manage the application state:
 
-• `WindowDimensionsContext`: Tracks and provides window dimensions
-• `MousePositionContext`: Tracks and provides mouse coordinates
-• `SceneStateContext`: Manages the P5.js scene state and proximity calculations
+- `WindowDimensionsContext`: Tracks and provides window dimensions
+- `MousePositionContext`: Tracks and provides mouse coordinates
+- `SceneStateContext`: Manages the P5.js scene state and proximity calculations
 
 ### Page Transitions
 
@@ -66,8 +66,8 @@ Smooth page transitions are implemented using Motion's `AnimatePresence` compone
 
 ### Prerequisites
 
-• Node.js >= 18.0.0
-• npm >= 9.0.0
+- Node.js >= 18.0.0
+- npm >= 9.0.0
 
 ### Installation
 
@@ -82,6 +82,6 @@ yarn dev
 
 This project uses custom ESLint and Prettier configurations:
 
-• Arrow functions are preferred over regular functions
-• Single quotes are used for strings and JSX attributes
-• Trailing commas are disabled
+- Arrow functions are preferred over regular functions
+- Single quotes are used for strings and JSX attributes
+- Trailing commas are disabled
