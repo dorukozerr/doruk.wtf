@@ -14,7 +14,8 @@ export const Header = () => {
         </button>
         <div className='hidden items-center justify-center gap-6 md:flex'>
           <button onClick={() => navigate('/')}>Home</button>
-          <button onClick={() => navigate('/portfolio')}>Portfolio</button>
+          <button onClick={() => navigate('/projects')}>Projects</button>
+          <button onClick={() => navigate('/contact')}>Contact</button>
         </div>
       </div>
     </header>

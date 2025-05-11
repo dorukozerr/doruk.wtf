@@ -9,10 +9,10 @@ export const Home = () => (
     initial='enter'
     animate='active'
     exit='exit'
-    className='relative flex h-full w-full flex-col items-start justify-start overflow-x-hidden overflow-y-auto'
+    className='flex h-full w-full flex-col items-start justify-start overflow-x-hidden overflow-y-auto'
   >
     <section className='flex min-h-dvh w-full items-center justify-center'>
-      <div className='flex h-max w-[min(90vw,600px)] cursor-pointer flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-16'>
+      <div className='flex h-max w-[min(90vw,600px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
         <h2 className='text-center text-5xl font-light text-white'>
           Oh, Hello There
         </h2>
@@ -22,17 +22,15 @@ export const Home = () => (
         </h5>
       </div>
     </section>
-    <section
-      id='about-section'
-      className='flex min-h-dvh w-full flex-col items-center justify-center'
-    >
-      <div className='flex h-max w-max max-w-2xl flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
+    <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
+      <div className='flex h-max w-[min(90vw,600px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
         <h3 className='text-3xl font-light text-white'>The Promised Content</h3>
         <p className='text-center text-lg font-extralight text-white/50'>
-          Sorry to say that I'm suck at writing, even if I try 24 hours straight
-          I can't come up with something meaningful to write here, also I don't
-          wanna use some AI generated content. Maybe look into projects section
-          and inspect my source codes then contact me, that would be great.
+          Sorry to say this but I'm suck at writing, even if I try 24 hours
+          straight I can't come up with something meaningful to write here, also
+          I don't wanna use some AI generated content. Maybe look into projects
+          section and inspect my source codes then contact me, that would be
+          nice.
         </p>
       </div>
     </section>
