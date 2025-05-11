@@ -41,7 +41,7 @@ export const P5Scene = () => {
     p5.vertex(0, height);
     p5.endShape(p5.CLOSE);
     p5.noStroke();
-    p5.fill(233, 233, 233);
+    p5.fill(233, 233, 233, 255);
     p5.circle(width / 2, height / 2, 233);
     p5.fill(144, 144, 144);
     p5.circle(width / 2, height / 2, 144);
