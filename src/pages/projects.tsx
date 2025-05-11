@@ -12,7 +12,7 @@ export const Projects = () => (
     className='flex h-full w-full flex-col items-start justify-start overflow-x-hidden overflow-y-auto'
   >
     <section className='flex min-h-dvh w-full items-center justify-center'>
-      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
+      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-4 sm:p-8'>
         <h2 className='text-center text-5xl text-white'>Wall of Shame</h2>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
         <h5 className='text-center text-xl font-light text-white/50'>
@@ -22,8 +22,8 @@ export const Projects = () => (
       </div>
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
-      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h3 className='text-3xl text-white'>doruk.wtf</h3>
+      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-4 sm:p-8'>
+        <h3 className='text-center text-3xl text-white'>doruk.wtf</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
         <p className='text-center font-light text-white/50'>
           The first project to list here of course is this site, here is the
@@ -40,8 +40,8 @@ export const Projects = () => (
       </div>
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
-      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h3 className='text-3xl text-white'>kisuke.vim</h3>
+      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-4 sm:p-8'>
+        <h3 className='text-center text-3xl text-white'>kisuke.vim</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
         <p className='text-center font-light text-white/50'>
           I'm really proud of this one, I somehow managed to develop a AI Vim
@@ -68,8 +68,8 @@ export const Projects = () => (
       </div>
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
-      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h3 className='text-3xl text-white'>Video Diary App</h3>
+      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-4 sm:p-8'>
+        <h3 className='text-center text-3xl text-white'>Video Diary App</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
         <p className='text-center font-light text-white/50'>
           A case study I did for a place I applied. Basic video saving and
@@ -91,8 +91,8 @@ export const Projects = () => (
       </div>
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
-      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h3 className='text-3xl text-white'>uWuallet</h3>
+      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-4 sm:p-8'>
+        <h3 className='text-center text-3xl text-white'>uWuallet</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
         <p className='text-center font-light text-white/50'>
           An expense tracker app built just for practicing nextjs app router and
@@ -115,8 +115,8 @@ export const Projects = () => (
       </div>
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
-      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-8'>
-        <h3 className='text-3xl text-white'>Real Estate App</h3>
+      <div className='flex h-max w-[min(90vw,500px)] flex-col items-center justify-center gap-4 rounded-md bg-black/30 p-4 sm:p-8'>
+        <h3 className='text-center text-3xl text-white'>Real Estate App</h3>
         <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
         <p className='text-center font-light text-white/50'>
           Another CRUD app with nextjs. Practiced pre-rendering on build time
