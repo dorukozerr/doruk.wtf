@@ -24,19 +24,19 @@ Welcome to the repository for my personal website, [doruk.wtf](https://doruk.wtf
 
 ```
 doruk.wtf/
-├── src/                  # Source files
-│   ├── components/       # Reusable components
-│   ├── context/          # React context providers
-│   │   ├── mouse-position/   # Mouse position tracking
-│   │   ├── scene-state/      # P5.js scene state management
+├── src/                       # Source files
+│   ├── components/            # Reusable components
+│   ├── context/               # React context providers
+│   │   ├── mouse-position/    # Mouse position tracking
+│   │   ├── scene-state/       # P5.js scene state management
 │   │   └── window-dimensions/ # Window size tracking
-│   ├── layout/           # Layout components
-│   ├── lib/              # Library configurations
-│   ├── pages/            # Page components
-│   ├── router/           # Routing configuration
-│   └── utils/            # Utility functions
-├── public/               # Static files
-└── ...config files       # Configuration files for build tools
+│   ├── layout/                # Layout components
+│   ├── lib/                   # Library configurations
+│   ├── pages/                 # Page components
+│   ├── router/                # Routing configuration
+│   └── utils/                 # Utility functions
+├── public/                    # Static files
+└── ...config files            # Configuration files for build tools
 ```
 
 ## Key Implementation Details
