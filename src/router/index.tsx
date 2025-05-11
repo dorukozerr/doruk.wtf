@@ -1,12 +1,13 @@
 import { createBrowserRouter, Outlet } from 'react-router-dom';
 
+import { Layout } from '~/layout';
+
 export const router = createBrowserRouter([
   {
     element: (
-      <div className='w-full h-full flex flex-col gap-4 justify-center items-center'>
-        <h1 className='text-5xl font-extrabold text-pink-500'>Temp Layout</h1>
+      <Layout>
         <Outlet />
-      </div>
+      </Layout>
     ),
     children: [
       { path: '/', element: <h1>Home Page</h1> },
