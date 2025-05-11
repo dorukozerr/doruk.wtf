@@ -1,11 +1,13 @@
-export const motionVariants = {
-  enter: { y: -20, opacity: 0, filter: 'blur(2px)' },
-  center: { y: 0, opacity: 1, filter: 'blur(0px)' },
-  exit: { y: 20, opacity: 0, filter: 'blur(2px)' }
+import type { Variants, Transition } from 'motion/react';
+
+export const variants: Variants = {
+  enter: { scale: 0, opacity: 0, filter: 'blur(99px)', rotate: 360 },
+  center: { scale: 1, opacity: 1, filter: 'blur(0px)', rotate: 0 },
+  exit: { scale: 0, opacity: 0, filter: 'blur(99px)', rotate: 360 }
 };
 
-export const transitionConfig = {
+export const transition: Transition = {
   type: 'tween',
-  duration: 0.5,
-  ease: 'easeOut'
+  duration: 0.75,
+  ease: 'anticipate'
 };

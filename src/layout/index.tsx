@@ -12,7 +12,7 @@ export const Layout = () => {
   return (
     <div className='w-full h-full bg-black flex-col flex justify-start items-start'>
       <Header />
-      <main className='flex-1 w-full'>
+      <main className='relative h-max z-10 w-full'>
         <AnimatePresence initial={false} mode='wait'>
           {cloneElement(currentOutlet ?? <div />, { key: location.pathname })}
         </AnimatePresence>
