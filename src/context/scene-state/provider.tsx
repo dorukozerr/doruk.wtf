@@ -1,12 +1,12 @@
-import { useState, useEffect, type RefObject } from 'react';
+import { useRef, useState, useEffect, type ReactNode } from 'react';
 
+import { SceneStateContext } from '~/context/scene-state';
 import { useWindowDimensionsContext } from '~/context/window-dimensions';
 import { useMousePositionContext } from '~/context/mouse-position';
 import { linearMap } from '~/utils/linear-map';
 
-export const useElementProximity = <T extends HTMLElement | null>(
-  elementRef: RefObject<T>
-) => {
+export const SceneStateProvider = ({ children }: { children: ReactNode }) => {
+  const triggerRef = useRef<HTMLButtonElement>(null);
   const [proximity, setProximity] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const { width, height } = useWindowDimensionsContext();
@@ -14,7 +14,7 @@ export const useElementProximity = <T extends HTMLElement | null>(
   const mousePosition = useMousePositionContext();
 
   useEffect(() => {
-    const element = elementRef.current;
+    const element = triggerRef.current;
 
     if (!element) return;
 
@@ -75,7 +75,11 @@ export const useElementProximity = <T extends HTMLElement | null>(
     };
 
     checkHover();
-  }, [mousePosition, elementRef, width, height]);
+  }, [mousePosition, triggerRef, width, height]);
 
-  return { proximity, isHovered };
+  return (
+    <SceneStateContext.Provider value={{ triggerRef, proximity, isHovered }}>
+      {children}
+    </SceneStateContext.Provider>
+  );
 };
