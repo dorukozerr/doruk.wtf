@@ -4,23 +4,20 @@ export const variants: Variants = {
   enter: {
     scale: 0,
     opacity: 0,
-    filter: 'blur(99px)',
     rotate: 360,
-    overflow: 'visible'
+    filter: 'blur(420px)'
   },
   active: {
     scale: 1,
     opacity: 1,
-    filter: 'blur(0px)',
     rotate: 0,
-    overflow: 'auto'
+    filter: 'blur(0px)'
   },
   exit: {
     scale: 0,
     opacity: 0,
-    filter: 'blur(99px)',
     rotate: -360,
-    overflow: 'visible'
+    filter: 'blur(420px)'
   }
 };
 
