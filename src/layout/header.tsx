@@ -45,8 +45,8 @@ export const Header = () => {
         </div>
       </header>
       <div
-        className='fixed top-4 left-4 z-50 flex w-[300px] items-stretch justify-start overflow-hidden rounded-[20px] md:hidden'
-        style={{ height: `${height - 32}px` }}
+        className='fixed top-4 left-4 flex w-[300px] items-stretch justify-start overflow-hidden rounded-[20px] md:hidden'
+        style={{ height: `${height - 32}px`, zIndex: isOpen ? 50 : 10 }}
       >
         <motion.nav
           initial={false}
@@ -97,7 +97,7 @@ const Path = (props: PathProps) => (
 
 const MenuToggle = ({ toggle }: { toggle: () => void }) => (
   <button
-    className='absolute top-4 left-4 flex h-[50px] w-[50px] cursor-pointer items-center justify-center rounded-full'
+    className='absolute top-4 left-4 z-50 flex h-[50px] w-[50px] cursor-pointer items-center justify-center rounded-full'
     onClick={toggle}
   >
     <svg width='23' height='23' viewBox='0 0 23 23'>
