@@ -1,2 +1,2 @@
-export const fib = (n: number): number =>
-  n <= 1 ? n : fib(n - 1) + fib(n - 2);
+export const fibonacci = (n: number): number =>
+  n <= 1 ? n : fibonacci(n - 1) + fibonacci(n - 2);
