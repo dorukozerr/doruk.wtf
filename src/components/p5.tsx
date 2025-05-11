@@ -3,6 +3,7 @@ import p5Types from 'p5';
 import Sketch from 'react-p5';
 
 import { useWindowDimensionsContext } from '~/context/window-dimensions';
+import { useSceneStateContext } from '~/context/scene-state';
 import { linearMap } from '~/utils/linear-map';
 
 const circleSizes = [
@@ -20,6 +21,7 @@ const alphaValues = Array.from({ length: circleSizes.length }).map((_, index) =>
 export const P5Scene = () => {
   const [yOff, setYOff] = useState(0);
   const { height, width } = useWindowDimensionsContext();
+  const { isHovered, proximity } = useSceneStateContext();
 
   const setup = (p5: p5Types, canvasParentRef: Element) => {
     p5.createCanvas(width, height).parent(canvasParentRef);
@@ -35,7 +37,14 @@ export const P5Scene = () => {
     p5.fill(255);
     p5.beginShape();
     for (let x = 0; x <= innerWidth; x += 10) {
-      const y = p5.map(p5.noise(xoff1, yOff), 0, 1, height / 6, height / 3);
+      const magnifierValue = p5.map(proximity, 0, 1, 5, 0.5);
+      const y = p5.map(
+        p5.noise(xoff1, yOff),
+        0,
+        magnifierValue,
+        height / 6,
+        height / 3
+      );
       p5.vertex(x, y);
       xoff1 += 0.05;
     }
@@ -48,7 +57,14 @@ export const P5Scene = () => {
     p5.fill(122.5);
     p5.beginShape();
     for (let x = 0; x <= width; x += 10) {
-      const y = p5.map(p5.noise(xoff2, yOff), 0, 2, height / 2, height);
+      const magnifierValue = p5.map(proximity, 0, 1, 5, 2.5);
+      const y = p5.map(
+        p5.noise(xoff2, yOff),
+        0,
+        magnifierValue,
+        height / 4,
+        height
+      );
       p5.vertex(x, y);
       xoff2 += 0.5;
     }
@@ -61,16 +77,26 @@ export const P5Scene = () => {
     p5.noStroke();
     circleSizes.forEach((size, index) => {
       const rgbValue = rgbValues[index];
-      // const alphaValue = p5.map(p5.noise(xoff2, yOff), 0, 1, 0, 255 / 4);
-      const alphaValue = alphaValues[index];
+      // const alphaValue = ;
+      const alphaValue = isHovered
+        ? p5.map(p5.noise(xoff2, yOff), 0, 1, 0, 255 / 4)
+        : alphaValues[index];
       p5.fill(rgbValue, rgbValue, rgbValue, alphaValue);
       p5.circle(width / 2, height / 2, size);
     });
 
     // Bottom Wawe
+    p5.fill(0);
     p5.beginShape();
     for (let x = 0; x <= width; x += 10) {
-      const y = p5.map(p5.noise(xoff3, yOff), 0, 0.5, height / 6, height);
+      const magnifierValue = p5.map(proximity, 0, 1, 0.8, 0.4);
+      const y = p5.map(
+        p5.noise(xoff3, yOff),
+        0,
+        magnifierValue,
+        height / 6,
+        height
+      );
       p5.vertex(x, y);
       xoff3 += 0.1;
     }
