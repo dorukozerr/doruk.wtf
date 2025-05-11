@@ -7,7 +7,7 @@ export const MousePositionProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: 999, y: 999 });
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) =>

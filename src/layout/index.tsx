@@ -13,7 +13,7 @@ export const Layout = () => {
   const { isHovered } = useSceneStateContext();
 
   return (
-    <div className='z-20 flex h-full w-full flex-col items-start justify-start overflow-hidden'>
+    <div className='flex h-full w-full flex-col items-start justify-start overflow-hidden'>
       <div className='absolute h-full w-full'>
         <P5Scene />
       </div>
