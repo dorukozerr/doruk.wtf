@@ -7,9 +7,9 @@ export const Portfolio = () => (
     variants={variants}
     transition={transition}
     initial='enter'
-    animate='center'
+    animate='active'
     exit='exit'
-    className='flex h-full w-full flex-col items-start justify-start gap-24 overflow-auto'
+    className='flex h-full w-full flex-col items-start justify-start gap-24'
   >
     <h1 className='text-5xl font-extrabold text-white'>Portfolio Page</h1>
     <div className='min-h-[900px] w-60 bg-black'></div>
