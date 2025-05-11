@@ -78,7 +78,7 @@ export const P5Scene = () => {
     circleSizes.forEach((size, index) => {
       const rgbValue = rgbValues[index];
       const alphaValue = isHovered
-        ? p5.map(p5.noise(xoff2, yOff), 0, 1, 0, 255 / 4)
+        ? p5.map(p5.noise(xoff2, yOff), 0, 1, 255, 255 / 2)
         : alphaValues[index];
       p5.fill(rgbValue, rgbValue, rgbValue, alphaValue);
       p5.circle(width / 2, height / 2, size);
