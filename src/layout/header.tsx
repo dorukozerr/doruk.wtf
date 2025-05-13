@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { motion, type Variants, AnimatePresence } from 'motion/react';
+import { motion, type Variants } from 'motion/react';
 
 import { useSceneStateContext } from '~/context/scene-state';
 import { useWindowDimensionsContext } from '~/context/window-dimensions';
