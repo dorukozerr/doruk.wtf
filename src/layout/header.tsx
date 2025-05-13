@@ -27,8 +27,8 @@ export const Header = () => {
   const { height } = useWindowDimensionsContext();
 
   const navLinkBottomLineLeftValue = buttonRef?.current
-    ? buttonRef.current.getClientRects()[0].right -
-      buttonRef.current.getClientRects()[0].width -
+    ? buttonRef.current?.getClientRects()[0]?.right -
+      buttonRef.current?.getClientRects()[0]?.width -
       16
     : 0;
 
