@@ -12,7 +12,7 @@ export const Projects = () => (
     className='flex h-full w-full flex-col items-start justify-start overflow-x-hidden overflow-y-auto'
   >
     <section className='flex min-h-dvh w-full items-center justify-center'>
-      <div className='flex h-[610px] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
+      <div className='flex h-[min(90vw,610px)] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
         <div className='w-full flex-1' />
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h2 className='text-center text-xl text-white'>Wall of Shame</h2>
@@ -26,7 +26,7 @@ export const Projects = () => (
       </div>
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
-      <div className='flex h-[610px] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
+      <div className='flex h-[min(90vw,610px)] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
         <div className='w-full flex-1' />
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>doruk.wtf</h3>
@@ -48,7 +48,7 @@ export const Projects = () => (
       </div>
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
-      <div className='flex h-[610px] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
+      <div className='flex h-[min(90vw,610px)] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
         <div className='w-full flex-1' />
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>kisuke.vim</h3>
@@ -74,7 +74,7 @@ export const Projects = () => (
       </div>
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
-      <div className='flex h-[610px] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
+      <div className='flex h-[min(90vw,610px)] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
         <div className='w-full flex-1' />
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>Video Diary App</h3>
@@ -98,7 +98,7 @@ export const Projects = () => (
       </div>
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
-      <div className='flex h-[610px] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
+      <div className='flex h-[min(90vw,610px)] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
         <div className='w-full flex-1' />
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>uwuallet</h3>
@@ -123,7 +123,7 @@ export const Projects = () => (
       </div>
     </section>
     <section className='flex min-h-dvh w-full flex-col items-center justify-center'>
-      <div className='flex h-[610px] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
+      <div className='flex h-[min(90vw,610px)] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
         <div className='w-full flex-1' />
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>Real Estate App</h3>
