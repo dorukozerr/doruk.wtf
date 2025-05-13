@@ -15,7 +15,7 @@ export const Home = () => (
       <div className='flex h-[min(90vw,610px)] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
         <div className='w-full flex-1' />
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
-          <h2 className='text-center text-xl text-white'>Oh, Hello There</h2>
+          <h2 className='text-center text-xl text-white'>Hello, Friend</h2>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
           <h5 className='text-center text-xs font-light text-white/50'>
             Welcome to my digital playground.
