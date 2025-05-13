@@ -58,7 +58,7 @@ export const Header = () => {
               className='absolute bottom-4 h-[1px] bg-white'
               animate={{
                 width: buttonRef.current?.clientWidth ?? 0,
-                left: navLinkBottomLineLeftValue
+                left: navLinkBottomLineLeftValue ?? 9999
               }}
               transition={{
                 type: 'spring',
