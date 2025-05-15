@@ -16,7 +16,7 @@ jobs:
           username: ${{ secrets.SERVER_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd ~/var/www/doruk.wtf
+            cd /var/www/doruk.wtf
             [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
             echo "=> Pulling the latest changes..."
             git pull
