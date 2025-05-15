@@ -3,9 +3,9 @@ import { useLocation, useOutlet } from 'react-router-dom';
 import { AnimatePresence } from 'motion/react';
 
 import { useSceneStateContext } from '~/context/scene-state';
-import { P5Scene } from '~/components/p5';
 import { Header } from '~/layout/header';
 import { Footer } from '~/layout/footer';
+import { P5Scene } from '~/components/p5';
 
 export const Layout = () => {
   const location = useLocation();

@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 
 import { variants, transition } from '~/lib/motion';
-
 import { GitHub, Twitch, Twitter, LinkedIn, Email } from '~/components/svgs';
 
 const iconProps = {

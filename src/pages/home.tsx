@@ -18,8 +18,8 @@ export const Home = () => (
           <h2 className='text-center text-xl text-white'>Hello, Friend</h2>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
           <h5 className='text-center text-xs font-light text-white/50'>
-            Welcome to my digital playground.
-            <br /> Scroll down if curiosity gets the better of you.
+            Welcome to my digital playground. Scroll down if curiosity gets the
+            better of you.
           </h5>
         </div>
         <div className='w-full flex-1' />

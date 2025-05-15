@@ -101,7 +101,7 @@ export const Projects = () => (
       <div className='flex h-[min(90vw,610px)] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
         <div className='w-full flex-1' />
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
-          <h3 className='text-center text-xl text-white'>uwuallet</h3>
+          <h3 className='text-center text-xl text-white'>uWuallet</h3>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
           <p className='text-center text-xs font-light text-white/50'>
             An{' '}
@@ -129,13 +129,12 @@ export const Projects = () => (
           <h3 className='text-center text-xl text-white'>Real Estate App</h3>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
           <p className='text-center text-xs font-light text-white/50'>
-            Next.js{' '}
             <a
               href='https://github.com/dorukozerr/real-estate-app/'
               target='_blank'
               className='text-white underline'
             >
-              app
+              Next.js app
             </a>{' '}
             focusing on SEO through build-time pre-rendering. Includes an admin
             panel with form validation via zod and react hook form. Each

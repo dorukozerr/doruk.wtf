@@ -4,7 +4,7 @@
 // 2 in range of 0, 4 = 15 in range of 10, 20
 //
 // parameters
-// from, from-, from+, t-, t+
+// from, from-, from+, to-, to+
 
 export const linearMap = (
   f: number,

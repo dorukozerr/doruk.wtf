@@ -23,16 +23,14 @@ export const P5Scene = () => {
   const { height, width } = useWindowDimensionsContext();
   const { isHovered, proximity } = useSceneStateContext();
 
-  const setup = (p5: p5Types, canvasParentRef: Element) => {
+  const setup = (p5: p5Types, canvasParentRef: Element) =>
     p5.createCanvas(width, height).parent(canvasParentRef);
-  };
 
   const draw = (p5: p5Types) => {
     let xoff1 = 0;
     let xoff2 = 0;
     let xoff3 = 0;
 
-    // First wawe
     p5.background(0);
     p5.fill(255);
     p5.beginShape();
@@ -53,7 +51,6 @@ export const P5Scene = () => {
     p5.vertex(0, height);
     p5.endShape(p5.CLOSE);
 
-    // Mid wawe
     p5.fill(122.5);
     p5.beginShape();
     for (let x = 0; x <= width; x += 10) {
@@ -73,7 +70,6 @@ export const P5Scene = () => {
     p5.vertex(0, height);
     p5.endShape(p5.CLOSE);
 
-    // Circles
     p5.noStroke();
     circleSizes.forEach((size, index) => {
       const rgbValue = rgbValues[index];
@@ -84,7 +80,6 @@ export const P5Scene = () => {
       p5.circle(width / 2, height / 2, size);
     });
 
-    // Bottom Wawe
     p5.fill(0);
     p5.beginShape();
     for (let x = 0; x <= width; x += 10) {
