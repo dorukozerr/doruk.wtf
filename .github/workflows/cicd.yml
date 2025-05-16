@@ -33,4 +33,4 @@ jobs:
             echo "=> Building project..."
             yarn build || { echo "Build failed"; exit 1; }
 
-            echo "=> Deployment completed successfully"
+            echo "=> Project builded successfully"
