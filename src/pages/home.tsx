@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 
 import { variants, transition } from '~/lib/motion';
@@ -33,9 +34,12 @@ export const Home = () => (
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
           <p className='text-center text-xs font-light text-white/50'>
             I built this site as a small window into my coding universe. No
-            fluff, no buzzwords, just honest work. Check out the projects
-            section to see what I've been tinkering with lately - that's where
-            the interesting stuff lives anyway.
+            fluff, no buzzwords, just experimental stuff. Check out the{' '}
+            <Link to='/projects' className='text-white underline'>
+              projects section
+            </Link>{' '}
+            to see what I've been tinkering with lately - that's where the
+            interesting stuff lives anyway.
           </p>
         </div>
         <div className='w-full flex-1' />
