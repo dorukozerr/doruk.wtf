@@ -88,10 +88,11 @@ export const Projects = () => (
             >
               React Native app
             </a>{' '}
-            for recording and editing video diaries. Built a custom scrubber
-            connected to video controls for a tailored playback experience. Used
-            ffmpeg for video processing, with tanstack query, zustand, zod, and
-            react hook form handling the data flow. Simple UI, complex pipeline.
+            for editing videos and saving them to your diary. Built a custom
+            scrubber connected to video controls for a tailored playback
+            experience. Used ffmpeg for video processing, with tanstack query,
+            zustand, zod, and react hook form handling the data flow. Simple UI,
+            interesting pipeline.
           </p>
         </div>
         <div className='w-full flex-1' />
