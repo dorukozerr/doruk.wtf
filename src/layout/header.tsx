@@ -81,8 +81,8 @@ export const Header = () => {
         </div>
       </header>
       <div
-        className='fixed top-4 left-4 flex w-[300px] items-stretch justify-start overflow-hidden rounded-[20px] md:hidden'
-        style={{ height: `${height - 32}px`, zIndex: isOpen ? 50 : 0 }}
+        className='pointer-events-none fixed top-4 left-4 flex w-[300px] items-stretch justify-start overflow-hidden rounded-[20px] md:hidden'
+        style={{ height: `${height - 32}px`, zIndex: 50 }}
       >
         <motion.nav
           initial={false}
@@ -101,7 +101,7 @@ export const Header = () => {
             {navigationLink.map(({ link, label }, index) => (
               <motion.button
                 key={`mobileNavLink-${index}`}
-                className='flex cursor-pointer items-center justify-start p-0 text-lg text-white'
+                className='pointer-events-auto flex cursor-pointer items-center justify-start p-0 text-lg text-white'
                 variants={navItemVariants}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
