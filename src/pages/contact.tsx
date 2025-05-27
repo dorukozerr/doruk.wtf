@@ -55,9 +55,9 @@ export const Contact = () => (
           <h3 className='text-center text-xl text-white'>Socials</h3>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
           <div className='flex items-center justify-center gap-4'>
-            {socialLinks.map((social, index) => (
-              <a key={`socialLink-${index}`} {...social.linkProps}>
-                {social.icon}
+            {socialLinks.map(({ linkProps, icon }, index) => (
+              <a key={`socialLink-${index}`} {...linkProps}>
+                {icon}
               </a>
             ))}
           </div>
