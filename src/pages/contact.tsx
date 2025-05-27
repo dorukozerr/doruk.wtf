@@ -11,6 +11,34 @@ const iconProps = {
     'cursor-pointer text-white/50 transition-all duration-300 hover:text-white'
 };
 
+const socialLinks = [
+  {
+    icon: <GitHub {...iconProps} />,
+    linkProps: { href: 'https://github.com/dorukozerr/', target: '_blank' }
+  },
+  {
+    icon: <Twitch {...iconProps} />,
+    linkProps: { href: 'https://www.twitch.tv/d0ruk0z3r', target: '_blank' }
+  },
+  {
+    icon: <Twitter {...iconProps} />,
+    linkProps: { href: 'https://x.com/dorukozerrr', target: '_blank' }
+  },
+  {
+    icon: <LinkedIn {...iconProps} />,
+    linkProps: {
+      href: 'https://www.linkedin.com/in/dorukozer/',
+      target: '_blank'
+    }
+  },
+  {
+    icon: <Email {...iconProps} />,
+    linkProps: {
+      href: 'mailto:dorukozer@protonmail.com?subject=Found your email from doruk.wtf'
+    }
+  }
+];
+
 export const Contact = () => (
   <motion.div
     variants={variants}
@@ -27,21 +55,11 @@ export const Contact = () => (
           <h3 className='text-center text-xl text-white'>Socials</h3>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
           <div className='flex items-center justify-center gap-4'>
-            <a href='https://github.com/dorukozerr/' target='_blank'>
-              <GitHub {...iconProps} />
-            </a>
-            <a href='https://www.twitch.tv/d0ruk0z3r' target='_blank'>
-              <Twitch {...iconProps} />
-            </a>
-            <a href='https://x.com/dorukozerrr' target='_blank'>
-              <Twitter {...iconProps} />
-            </a>
-            <a href='https://www.linkedin.com/in/dorukozer/' target='_blank'>
-              <LinkedIn {...iconProps} />
-            </a>
-            <a href='mailto:dorukozer@protonmail.com?subject=Found your email from doruk.wtf'>
-              <Email {...iconProps} />
-            </a>
+            {socialLinks.map((social, index) => (
+              <a key={`socialLink-${index}`} {...social.linkProps}>
+                {social.icon}
+              </a>
+            ))}
           </div>
         </div>
         <div className='w-full flex-1' />
