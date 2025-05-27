@@ -50,12 +50,6 @@ export const MobileSidebar = () => {
                 {label}
               </motion.button>
             ))}
-            <motion.div
-              className='pointer-events-auto flex cursor-pointer items-center justify-start p-0 text-lg text-white'
-              variants={navItemVariants}
-            >
-              Test
-            </motion.div>
           </motion.ul>
         </motion.nav>
       </div>
