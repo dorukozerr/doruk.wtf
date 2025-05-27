@@ -3,7 +3,7 @@ import { useRef, useState, useEffect, type ReactNode } from 'react';
 import { SceneStateContext } from '~/context/scene-state';
 import { useWindowDimensionsContext } from '~/context/window-dimensions';
 import { useMousePositionContext } from '~/context/mouse-position';
-import { linearMap } from '~/utils/linear-map';
+import { linearMap } from '~/lib/linear-map';
 
 export const SceneStateProvider = ({ children }: { children: ReactNode }) => {
   const triggerRef = useRef<HTMLButtonElement>(null);

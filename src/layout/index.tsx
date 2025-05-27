@@ -4,6 +4,7 @@ import { AnimatePresence } from 'motion/react';
 
 import { useSceneStateContext } from '~/context/scene-state';
 import { Header } from '~/layout/header';
+import { MobileSidebar } from '~/layout/mobile-sidebar';
 import { Footer } from '~/layout/footer';
 import { P5Scene } from '~/components/p5';
 
@@ -18,6 +19,7 @@ export const Layout = () => {
         <P5Scene />
       </div>
       <Header />
+      <MobileSidebar />
       {isHovered ? null : (
         <AnimatePresence initial={false} mode='wait'>
           {cloneElement(currentOutlet ?? <div />, { key: location.pathname })}

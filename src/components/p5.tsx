@@ -4,7 +4,7 @@ import Sketch from 'react-p5';
 
 import { useWindowDimensionsContext } from '~/context/window-dimensions';
 import { useSceneStateContext } from '~/context/scene-state';
-import { linearMap } from '~/utils/linear-map';
+import { linearMap } from '~/lib/linear-map';
 
 const circleSizes = [
   2584, 1597, 987, 610, 377, 233, 144, 89, 55, 34, 21, 13, 8, 5, 3, 2, 1
