@@ -4,7 +4,6 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import reactCompiler from 'babel-plugin-react-compiler';
 import tailwindcss from '@tailwindcss/vite';
-import { visualizer } from 'rollup-plugin-visualizer';
 import unusedCode from 'vite-plugin-unused-code';
 
 // https://vite.dev/config/
@@ -15,8 +14,7 @@ export default defineConfig({
       babel: { plugins: [['babel-plugin-react-compiler', reactCompiler]] }
     }),
     tailwindcss(),
-    unusedCode({ patterns: ['src/**/*.{ts,tsx}'] }),
-    visualizer({ open: true, filename: 'bundle-visualization.html' })
+    unusedCode({ patterns: ['src/**/*.{ts,tsx}'] })
   ],
   resolve: {
     alias: {
