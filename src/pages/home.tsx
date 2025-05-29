@@ -18,7 +18,7 @@ export const Home = () => (
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h2 className='text-center text-xl text-white'>Hello, Friend</h2>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-          <h5 className='text-center text-xs font-light text-white/50'>
+          <h5 className='text-center text-xs font-light text-white/80'>
             Welcome to my digital playground. Scroll down if curiosity gets the
             better of you.
           </h5>
@@ -32,7 +32,7 @@ export const Home = () => (
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>About This Place</h3>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-          <p className='text-center text-xs font-light text-white/50'>
+          <p className='text-center text-xs font-light text-white/80'>
             I built this site as a small window into my coding universe. No
             fluff, no buzzwords, just experimental stuff. Check out the{' '}
             <Link to='/projects' className='text-white underline'>

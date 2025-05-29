@@ -8,7 +8,7 @@ const iconProps = {
   height: 48,
   strokeWidth: 0.75,
   className:
-    'cursor-pointer text-white/50 transition-all duration-300 hover:text-white'
+    'cursor-pointer text-white/80 transition-all duration-300 hover:text-white'
 };
 
 const socialLinks = [

@@ -17,7 +17,7 @@ export const Projects = () => (
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h2 className='text-center text-xl text-white'>Wall of Shame</h2>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-          <h5 className='text-center text-xs font-light text-white/50'>
+          <h5 className='text-center text-xs font-light text-white/80'>
             Here's a collection of things I've built when I should have probably
             been sleeping. Judge them gently.
           </h5>
@@ -31,7 +31,7 @@ export const Projects = () => (
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>doruk.wtf</h3>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-          <p className='text-center text-xs font-light text-white/50'>
+          <p className='text-center text-xs font-light text-white/80'>
             The first project to list here of course is this site, here is the
             github{' '}
             <a
@@ -53,7 +53,7 @@ export const Projects = () => (
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>kisuke.vim</h3>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-          <p className='text-center text-xs font-light text-white/50'>
+          <p className='text-center text-xs font-light text-white/80'>
             My{' '}
             <a
               href='https://github.com/dorukozerr/kisuke.vim'
@@ -79,7 +79,7 @@ export const Projects = () => (
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>Video Diary App</h3>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-          <p className='text-center text-xs font-light text-white/50'>
+          <p className='text-center text-xs font-light text-white/80'>
             A{' '}
             <a
               href='https://github.com/dorukozerr/video-diary/'
@@ -104,7 +104,7 @@ export const Projects = () => (
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>uWuallet</h3>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-          <p className='text-center text-xs font-light text-white/50'>
+          <p className='text-center text-xs font-light text-white/80'>
             An{' '}
             <a
               href='https://github.com/dorukozerr/uwuallet'
@@ -129,7 +129,7 @@ export const Projects = () => (
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>Real Estate App</h3>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
-          <p className='text-center text-xs font-light text-white/50'>
+          <p className='text-center text-xs font-light text-white/80'>
             <a
               href='https://github.com/dorukozerr/real-estate-app/'
               target='_blank'
