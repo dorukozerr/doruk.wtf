@@ -79,7 +79,7 @@ const SidebarToggleButton = ({
   setIsOpen: (newState: boolean) => void;
 }) => (
   <motion.nav
-    className='fixed top-8 left-8 z-60 flex h-[50px] w-[50px] rounded-full sm:hidden'
+    className='fixed top-8 left-8 z-60 flex h-[50px] w-[50px] rounded-full md:hidden'
     initial={false}
     animate={isOpen ? 'open' : 'closed'}
   >
