@@ -8,13 +8,16 @@ export const WindowDimensionsProvider = ({
   children: ReactNode;
 }) => {
   const [dimensions, setDimensions] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight
+    width: document.documentElement.clientWidth,
+    height: document.documentElement.clientHeight
   });
 
   useEffect(() => {
     const onResize = () =>
-      setDimensions({ width: window.innerWidth, height: window.innerHeight });
+      setDimensions({
+        width: document.documentElement.clientWidth,
+        height: document.documentElement.clientHeight
+      });
 
     window.addEventListener('resize', onResize);
 

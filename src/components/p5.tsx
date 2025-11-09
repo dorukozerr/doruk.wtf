@@ -100,5 +100,7 @@ export const P5Scene = () => {
     p5.endShape(p5.CLOSE);
   };
 
-  return <Sketch setup={setup} draw={draw} />;
+  const windowResized = (p5: p5Types) => p5.resizeCanvas(width, height);
+
+  return <Sketch setup={setup} draw={draw} windowResized={windowResized} />;
 };
