@@ -1,21 +1,31 @@
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { motion } from 'motion/react';
 
+import { useWindowDimensionsContext } from '~/context/window-dimensions';
 import { useSceneStateContext } from '~/context/scene-state';
 import { navigationLinks } from '~/lib/navigation-links';
 
 export const Header = () => {
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const [dimensions, setDimensions] = useState({ width: 0, left: 9999 });
+
   const navigate = useNavigate();
   const location = useLocation();
-  const { triggerRef } = useSceneStateContext();
 
-  const navLinkBottomLineLeftValue = buttonRef?.current
-    ? buttonRef.current?.getClientRects()[0]?.right -
-      buttonRef.current?.getClientRects()[0]?.width -
-      16
-    : 0;
+  const { triggerRef } = useSceneStateContext();
+  const { width } = useWindowDimensionsContext();
+
+  useEffect(() => {
+    if (buttonRef.current) {
+      const rect = buttonRef.current.getClientRects()[0];
+
+      setDimensions({
+        width: buttonRef.current.clientWidth,
+        left: rect ? rect.right - rect.width - 16 : 9999
+      });
+    }
+  }, [location.pathname, width]);
 
   return (
     <header className='fixed top-0 left-0 z-20 hidden w-full items-center justify-center p-4 text-white md:flex'>
@@ -39,10 +49,10 @@ export const Header = () => {
           ))}
           <motion.div
             key='headerActiveLinkLine'
-            className='absolute bottom-4 h-[1px] bg-white'
+            className='absolute bottom-4 h-px bg-white'
             animate={{
-              width: buttonRef.current?.clientWidth ?? 0,
-              left: navLinkBottomLineLeftValue ?? 9999
+              width: dimensions.width,
+              left: dimensions.left
             }}
             transition={{
               type: 'spring',
