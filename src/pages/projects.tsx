@@ -77,6 +77,29 @@ export const Projects = () => (
       <div className='flex h-[min(90vw,610px)] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
         <div className='w-full flex-1' />
         <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
+          <h3 className='text-center text-xl text-white'>coc-zshell</h3>
+          <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
+          <p className='text-center text-xs font-light text-white/80'>
+            Coc extension that enables autocompletion support for zsh in
+            Vim/Neovim. Glued bunch of stuff I stole from public, did almost
+            nothing special. I mentioned sources in the{' '}
+            <a
+              href='https://github.com/dorukozerr/coc-zshell?tab=readme-ov-file#credits'
+              target='_blank'
+              className='text-white underline'
+            >
+              project README
+            </a>{' '}
+            tho.
+          </p>
+        </div>
+        <div className='w-full flex-1' />
+      </div>
+    </section>
+    <section className='flex min-h-dvh w-full snap-center items-center justify-center'>
+      <div className='flex h-[min(90vw,610px)] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
+        <div className='w-full flex-1' />
+        <div className='w-full space-y-4 bg-black/50 p-4 sm:p-8'>
           <h3 className='text-center text-xl text-white'>Video Diary App</h3>
           <div className='h-0.5 w-full bg-gradient-to-r from-white/0 via-white/30 to-white/0' />
           <p className='text-center text-xs font-light text-white/80'>
