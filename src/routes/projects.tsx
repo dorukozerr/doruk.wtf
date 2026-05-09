@@ -1,11 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const Projects = () => (
-  <main>
-    <h2>PROJECTS</h2>
-  </main>
-);
+import { Page } from "#/components/page";
+
+const Projects = () => <Page path="/projects" />;
 
 export const Route = createFileRoute("/projects")({
   component: Projects,
+  head: () => ({ meta: [{ title: "Please don't judge" }] }),
 });

@@ -1,4 +1,5 @@
 import { createRouter as createTanStackRouter } from "@tanstack/react-router";
+
 import { routeTree } from "#/routeTree.gen";
 
 export const getRouter = () => {
@@ -8,7 +9,6 @@ export const getRouter = () => {
     defaultPreload: "intent",
     defaultPreloadStaleTime: 0,
     isPrerendering: true,
-    
   });
 
   return router;

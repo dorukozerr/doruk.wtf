@@ -1,11 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-const RouteComponent = () => (
-  <main>
-    <h1>CONTACT</h1>
-  </main>
-);
+import { Page } from "#/components/page";
+
+const Contact = () => <Page path="/contact" />;
 
 export const Route = createFileRoute("/contact")({
-  component: RouteComponent,
+  component: Contact,
 });
