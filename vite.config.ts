@@ -1,21 +1,26 @@
-import path from 'path'
+import { defineConfig } from "vite-plus";
+import { devtools } from "@tanstack/devtools-vite";
 
-import babel from '@rolldown/plugin-babel'
-import tailwindcss from '@tailwindcss/vite'
-import react, { reactCompilerPreset } from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 
-export default defineConfig({
-  plugins: [
-    react({ jsxRuntime: 'automatic' }),
-    babel({
-      presets: [reactCompilerPreset({ compilationMode: 'annotation' })]
-    }),
-    tailwindcss()
-  ],
-  resolve: { alias: { '~': path.resolve(__dirname, './src') } },
-  optimizeDeps: {
-    include: ['p5', 'reactP5', 'react-router-dom', 'react', 'motion']
+import viteReact from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
+import { cloudflare } from "@cloudflare/vite-plugin";
+
+const config = defineConfig({
+  staged: {
+    "*": "vp check --fix",
   },
-  build: { chunkSizeWarningLimit: 1000 }
-})
+  fmt: {},
+  lint: { options: { typeAware: true, typeCheck: true } },
+  resolve: { tsconfigPaths: true },
+  plugins: [
+    devtools(),
+    cloudflare({ viteEnvironment: { name: "ssr" } }),
+    tailwindcss(),
+    tanstackStart(),
+    viteReact(),
+  ],
+});
+
+export default config;
