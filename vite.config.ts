@@ -1,38 +1,21 @@
-import path from 'path';
+import path from 'path'
 
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import reactCompiler from 'babel-plugin-react-compiler';
-import tailwindcss from '@tailwindcss/vite';
-import unusedCode from 'vite-plugin-unused-code';
+import babel from '@rolldown/plugin-babel'
+import tailwindcss from '@tailwindcss/vite'
+import react, { reactCompilerPreset } from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
 
-const reactDom = ['react-dom'];
-const motion = ['motion'];
-const p5 = ['p5'];
-const reactP5 = ['react-p5'];
-
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
-    react({
-      jsxRuntime: 'automatic',
-      babel: { plugins: [['babel-plugin-react-compiler', reactCompiler]] }
+    react({ jsxRuntime: 'automatic' }),
+    babel({
+      presets: [reactCompilerPreset({ compilationMode: 'annotation' })]
     }),
-    tailwindcss(),
-    unusedCode({ patterns: ['src/**/*.{ts,tsx}'] })
+    tailwindcss()
   ],
-  resolve: {
-    alias: {
-      '~': path.resolve(__dirname, './src')
-    }
+  resolve: { alias: { '~': path.resolve(__dirname, './src') } },
+  optimizeDeps: {
+    include: ['p5', 'reactP5', 'react-router-dom', 'react', 'motion']
   },
-  optimizeDeps: { include: p5 },
-  build: {
-    chunkSizeWarningLimit: 1000,
-    rollupOptions: {
-      output: {
-        manualChunks: { reactDom, motion, p5, reactP5 }
-      }
-    }
-  }
-});
+  build: { chunkSizeWarningLimit: 1000 }
+})

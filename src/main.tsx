@@ -1,13 +1,13 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import { RouterProvider } from 'react-router-dom'
 
-import { WindowDimensionsProvider } from './context/window-dimensions/provider';
-import { MousePositionProvider } from '~/context/mouse-position/provider';
-import { SceneStateProvider } from './context/scene-state/provider';
-import { router } from '~/router';
+import { MousePositionProvider } from '~/context/mouse-position/provider'
+import { router } from '~/router'
 
-import '~/index.css';
+import '~/index.css'
+import { SceneStateProvider } from './context/scene-state/provider'
+import { WindowDimensionsProvider } from './context/window-dimensions/provider'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -19,4 +19,4 @@ createRoot(document.getElementById('root')!).render(
       </MousePositionProvider>
     </WindowDimensionsProvider>
   </StrictMode>
-);
+)

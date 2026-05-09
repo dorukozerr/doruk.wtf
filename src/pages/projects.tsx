@@ -1,6 +1,6 @@
-import { motion } from 'motion/react';
+import { motion } from 'motion/react'
 
-import { variants, transition } from '~/lib/motion';
+import { transition, variants } from '~/lib/motion'
 
 export const Projects = () => (
   <motion.div
@@ -9,7 +9,7 @@ export const Projects = () => (
     initial='enter'
     animate='active'
     exit='exit'
-    className='flex h-full w-full snap-y snap-mandatory flex-col items-start justify-start overflow-x-hidden overflow-y-auto'
+    className='flex w-full flex-col items-start justify-start'
   >
     <section className='flex min-h-dvh w-full snap-center items-center justify-center'>
       <div className='flex h-[min(90vw,610px)] w-[min(90vw,610px)] flex-col items-center justify-center gap-4 overflow-hidden rounded-full bg-black/50'>
@@ -192,4 +192,4 @@ export const Projects = () => (
       </div>
     </section>
   </motion.div>
-);
+)

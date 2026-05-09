@@ -1,7 +1,7 @@
-import { motion } from 'motion/react';
+import { motion } from 'motion/react'
 
-import { variants, transition } from '~/lib/motion';
-import { GitHub, Twitch, Twitter, LinkedIn, Email } from '~/components/svgs';
+import { transition, variants } from '~/lib/motion'
+import { Email, GitHub, LinkedIn, Twitch, Twitter } from '~/components/svgs'
 
 const iconProps = {
   width: 48,
@@ -9,7 +9,7 @@ const iconProps = {
   strokeWidth: 0.75,
   className:
     'cursor-pointer text-white/80 transition-all duration-300 hover:text-white'
-};
+}
 
 const socialLinks = [
   {
@@ -37,7 +37,7 @@ const socialLinks = [
       href: 'mailto:dorukozer@protonmail.com?subject=Found your email from doruk.wtf'
     }
   }
-];
+]
 
 export const Contact = () => (
   <motion.div
@@ -66,4 +66,4 @@ export const Contact = () => (
       </div>
     </section>
   </motion.div>
-);
+)

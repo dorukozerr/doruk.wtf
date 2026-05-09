@@ -1,31 +1,31 @@
-import { useRef, useState, useEffect } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
-import { motion } from 'motion/react';
+import { useEffect, useRef, useState } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
+import { motion } from 'motion/react'
 
-import { useWindowDimensionsContext } from '~/context/window-dimensions';
-import { useSceneStateContext } from '~/context/scene-state';
-import { navigationLinks } from '~/lib/navigation-links';
+import { navigationLinks } from '~/lib/navigation-links'
+import { useSceneStateContext } from '~/context/scene-state'
+import { useWindowDimensionsContext } from '~/context/window-dimensions'
 
 export const Header = () => {
-  const buttonRef = useRef<HTMLButtonElement>(null);
-  const [dimensions, setDimensions] = useState({ width: 0, left: 9999 });
+  const buttonRef = useRef<HTMLButtonElement>(null)
+  const [dimensions, setDimensions] = useState({ width: 0, left: 9999 })
 
-  const navigate = useNavigate();
-  const location = useLocation();
+  const navigate = useNavigate()
+  const location = useLocation()
 
-  const { triggerRef } = useSceneStateContext();
-  const { width } = useWindowDimensionsContext();
+  const { triggerRef } = useSceneStateContext()
+  const { width } = useWindowDimensionsContext()
 
   useEffect(() => {
     if (buttonRef.current) {
-      const rect = buttonRef.current.getClientRects()[0];
+      const rect = buttonRef.current.getClientRects()[0]
 
       setDimensions({
         width: buttonRef.current.clientWidth,
         left: rect ? rect.right - rect.width - 16 : 9999
-      });
+      })
     }
-  }, [location.pathname, width]);
+  }, [location.pathname, width])
 
   return (
     <header className='fixed top-0 left-0 z-20 hidden w-full items-center justify-center p-4 text-white md:flex'>
@@ -64,5 +64,5 @@ export const Header = () => {
         </div>
       </div>
     </header>
-  );
-};
+  )
+}

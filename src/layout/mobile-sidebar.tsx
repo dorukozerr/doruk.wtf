@@ -1,15 +1,15 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion, type Variants } from 'motion/react';
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { motion, type Variants } from 'motion/react'
 
-import { useWindowDimensionsContext } from '~/context/window-dimensions';
-import { sidebarVariants, navVariants, navItemVariants } from '~/lib/motion';
-import { navigationLinks } from '~/lib/navigation-links';
+import { navItemVariants, navVariants, sidebarVariants } from '~/lib/motion'
+import { navigationLinks } from '~/lib/navigation-links'
+import { useWindowDimensionsContext } from '~/context/window-dimensions'
 
 export const MobileSidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const navigate = useNavigate();
-  const { height } = useWindowDimensionsContext();
+  const [isOpen, setIsOpen] = useState(false)
+  const navigate = useNavigate()
+  const { height } = useWindowDimensionsContext()
 
   return (
     <>
@@ -18,17 +18,17 @@ export const MobileSidebar = () => {
         setIsOpen={(newState) => setIsOpen(newState)}
       />
       <div
-        className='pointer-events-none fixed top-4 left-4 flex w-[300px] items-stretch justify-start overflow-hidden rounded-[20px] md:hidden'
+        className='pointer-events-none fixed top-4 left-4 flex w-75 items-stretch justify-start overflow-hidden rounded-[20px] md:hidden'
         style={{ height: `${height - 32}px`, zIndex: 50 }}
       >
         <motion.nav
           initial={false}
           animate={isOpen ? 'open' : 'closed'}
           custom={height}
-          className='w-[300px]'
+          className='w-75'
         >
           <motion.div
-            className='absolute top-0 bottom-0 left-0 w-[300px] bg-white/10 backdrop-blur-xs'
+            className='absolute top-0 bottom-0 left-0 w-75 bg-white/10 backdrop-blur-xs'
             variants={sidebarVariants}
           />
           <motion.ul
@@ -43,8 +43,8 @@ export const MobileSidebar = () => {
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={() => {
-                  navigate(link);
-                  setIsOpen(false);
+                  navigate(link)
+                  setIsOpen(false)
                 }}
               >
                 {label}
@@ -54,13 +54,13 @@ export const MobileSidebar = () => {
         </motion.nav>
       </div>
     </>
-  );
-};
+  )
+}
 
 const Path = (props: {
-  d?: string;
-  variants: Variants;
-  transition?: { duration: number };
+  d?: string
+  variants: Variants
+  transition?: { duration: number }
 }) => (
   <motion.path
     fill='transparent'
@@ -69,22 +69,22 @@ const Path = (props: {
     strokeLinecap='round'
     {...props}
   />
-);
+)
 
 const SidebarToggleButton = ({
   isOpen,
   setIsOpen
 }: {
-  isOpen: boolean;
-  setIsOpen: (newState: boolean) => void;
+  isOpen: boolean
+  setIsOpen: (_newState: boolean) => void
 }) => (
   <motion.nav
-    className='fixed top-8 left-8 z-60 flex h-[50px] w-[50px] rounded-full md:hidden'
+    className='fixed top-8 left-8 z-60 flex h-12.5 w-12.5 rounded-full md:hidden'
     initial={false}
     animate={isOpen ? 'open' : 'closed'}
   >
     <button
-      className='flex h-[50px] w-[50px] cursor-pointer items-center justify-center rounded-full'
+      className='flex h-12.5 w-12.5 cursor-pointer items-center justify-center rounded-full'
       onClick={() => setIsOpen(!isOpen)}
     >
       <svg width='23' height='23' viewBox='0 0 23 23'>
@@ -111,4 +111,4 @@ const SidebarToggleButton = ({
       </svg>
     </button>
   </motion.nav>
-);
+)
