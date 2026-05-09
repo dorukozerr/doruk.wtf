@@ -1,7 +1,7 @@
 import { type SECTION } from '~/types'
 
 export const content = {
-  homePage: [
+  '/': [
     {
       title: 'Hello, Friend',
       description:
@@ -13,7 +13,7 @@ export const content = {
         "I built this site as a small window into my coding universe. No fluff, no buzzwords, just experimental stuff. Check out the [projects section|/projects] to see what I've been tinkering with lately - that's where the interesting stuff lives anyway."
     }
   ],
-  projects: [
+  '/projects': [
     {
       title: 'Wall of Shame',
       description:
@@ -53,6 +53,12 @@ export const content = {
       title: 'Real Estate App',
       description:
         '[Next.js app|https://github.com/dorukozerr/real-estate-app/] focusing on SEO through build-time pre-rendering. Includes an admin panel with form validation via zod and react hook form. Each database entry gets pre-rendered during build for optimal search engine visibility. Clean implementation of CRUD operations with performance in mind.'
+    }
+  ],
+  '/contact': [
+    {
+      title: 'Socials',
+      description: 'socials'
     }
   ]
 } satisfies Record<string, SECTION[]>
