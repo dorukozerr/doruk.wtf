@@ -1,12 +1,42 @@
 @import "tailwindcss";
+@import "@fontsource/iosevka-aile/100.css";
+@import "@fontsource/iosevka-aile/400.css";
 @plugin "@tailwindcss/typography";
 
-html,
-body {
-  height: 100%;
-  background-color: #000;
-}
+@layer base {
+  * {
+    @apply font-extralight;
+  }
 
-body {
-  color: white;
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    scrollbar-color: #1a1a1a #000;
+    scrollbar-width: thin;
+  }
+
+  @theme inline {
+    --font-sans: "Iosevka Aile", sans-serif;
+    --font-mono: "Iosevka Aile", monospace;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #000;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #1a1a1a;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #2a2a2a;
+  }
 }

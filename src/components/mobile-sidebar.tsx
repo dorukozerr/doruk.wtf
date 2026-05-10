@@ -2,13 +2,8 @@ import { useNavigate } from "@tanstack/react-router";
 import { motion, type Variants } from "motion/react";
 import { useState } from "react";
 
-// import { useWindowDimensionsContext } from "#/context/window-dimensions";
-
-export const navigationLinks = [
-  { label: "Home", to: "/" },
-  { label: "Projects", to: "/projects" },
-  { label: "Contact", to: "/contact" },
-] as const;
+import { useWindowCTX } from "#/contexts/window";
+import { links } from "#/static/links";
 
 export const sidebarVariants: Variants = {
   open: (height = 1000) => ({
@@ -51,19 +46,21 @@ export const navItemVariants: Variants = {
 export const MobileSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
-  // const { height } = useWindowDimensionsContext();
+  const {
+    dimensions: { height },
+  } = useWindowCTX();
 
   return (
     <>
-      <SidebarToggleButton isOpen={isOpen} setIsOpen={(newState) => setIsOpen(newState)} />
+      <SidebarToggleButton isOpen={isOpen} setIsOpen={newState => setIsOpen(newState)} />
       <div
         className="pointer-events-none fixed top-4 left-4 flex w-75 items-stretch justify-start overflow-hidden rounded-[20px] md:hidden"
-        // style={{ height: `${height - 32}px`, zIndex: 50 }}
+        style={{ height: `${height - 32}px`, zIndex: 50 }}
       >
         <motion.nav
           initial={false}
           animate={isOpen ? "open" : "closed"}
-          // custom={height}
+          custom={height}
           className="w-75"
         >
           <motion.div
@@ -74,10 +71,10 @@ export const MobileSidebar = () => {
             className="absolute top-24 m-0 w-full list-none space-y-4 px-4"
             variants={navVariants}
           >
-            {navigationLinks.map(({ to, label }, index) => (
+            {links.map(({ to, label }, index) => (
               <motion.button
                 key={`mobileNavLink-${index}`}
-                className="pointer-events-auto flex cursor-pointer items-center justify-start p-0 text-lg text-white"
+                className="pointer-events-auto flex cursor-pointer items-center justify-start p-0 text-xl text-white"
                 variants={navItemVariants}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}

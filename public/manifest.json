@@ -2,8 +2,12 @@
   "short_name": "doruk.wtf",
   "name": "Fibonacci is beautiful isn't it?",
   "version": "0.1.0",
-  "manifest_version": 3,
   "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
@@ -20,8 +24,8 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
-  "theme_color": "#fafafa",
+  "theme_color": "#000000",
   "background_color": "#000000"
 }

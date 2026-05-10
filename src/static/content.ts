@@ -9,49 +9,49 @@ export const content = {
     {
       title: "About This Place",
       content:
-        "I built this site as a small window into my coding universe. No fluff, no buzzwords, just experimental stuff. Check out the [projects section|/projects] to see what I've been tinkering with lately - that's where the interesting stuff lives anyway.",
+        "A small window into things I build. No fluff, no buzzwords, mostly experimental stuff. The [projects section|/projects] is where the interesting bits live.",
     },
   ],
   "/projects": [
     {
       title: "Wall of Shame",
       content:
-        "Here's a collection of things I've built when I should have probably been sleeping. Judge them gently.",
+        "Things I've built when I should have probably been sleeping. Some are useful, some are just experiments. Judge them gently.",
     },
     {
       title: "doruk.wtf",
       content:
-        "The first project to list here of course is this site, here is the github [link|https://github.com/dorukozerr/doruk.wtf].",
+        "Starting with the obvious — this site. [Source on GitHub|https://github.com/dorukozerr/doruk.wtf].",
     },
     {
       title: "kisuke.vim",
       content:
-        "My [Vim plugin|https://github.com/dorukozerr/kisuke.vim] that lets you chat with AI models right in your editor. Built with TypeScript for the server process, it handles multi-session history and supports various AI providers. Communication happens through stdin/stdout with JSON payloads shuttling between Vim and the TS server. Learned about standard streams while building this one. Simple but useful.",
+        "A [Vim plugin|https://github.com/dorukozerr/kisuke.vim] for chatting with AI models inside the editor. TypeScript server talks to a VimScript client over stdin/stdout with JSON payloads. Handles multi-session history, file context marking, and multiple providers (Anthropic, OpenAI, Google, Grok). Taught me a lot about IPC and standard streams.",
     },
     {
       title: "coc-zshell",
       content:
-        "Coc extension that enables autocompletion support for zsh in Vim/Neovim. Glued bunch of stuff I stole from public, did almost nothing special. I mentioned sources in the [project README|https://github.com/dorukozerr/coc-zshell?tab=readme-ov-file#credits] tho.",
+        "[Coc.nvim extension|https://github.com/dorukozerr/coc-zshell] that brings zsh autocompletions into Vim by intercepting completions from a pseudo zsh shell. The trick was getting zsh's completion system to talk to something that wasn't a real terminal. Sources and prior art credited in the README.",
     },
     {
       title: "fzf-clipboard",
       content:
-        "fzf wrapper + background process script for clipboard history search like any other fzf extension - [link|https://github.com/dorukozerr/fzf-clipboard]",
+        "[fzf wrapper|https://github.com/dorukozerr/fzf-clipboard] for searching clipboard history. Background process collects entries, fzf surfaces them. Lives in my dotfiles and earns its keep.",
     },
     {
       title: "Video Diary App",
       content:
-        "A [React Native app|https://github.com/dorukozerr/video-diary/] for editing videos and saving them to your diary. Built a custom scrubber connected to video controls for a tailored playback experience. Used ffmpeg for video processing, with tanstack query, zustand, zod, and react hook form handling the data flow. Simple UI, interesting pipeline.",
+        "A [React Native app|https://github.com/dorukozerr/video-diary/] for trimming videos and saving them as diary entries. Custom scrubber wired into the video player for tighter playback control, ffmpeg handling the processing, TanStack Query + Zustand + Zod + React Hook Form for the data layer. Small UI, interesting pipeline underneath.",
     },
     {
-      title: "uWuallet",
+      title: "birefnet-sandbox",
       content:
-        "An [expense tracker|https://github.com/dorukozerr/uwuallet] I built to play with Next.js app router and server actions. Features JWT auth with hashed passwords and MongoDB integration. Users can track expenses/income and view basic analytics on their spending. Nothing fancy, just practical CRUD functionality with modern patterns.",
+        'A [Python sandbox|https://github.com/dorukozerr/birefnet-sandbox] for background removal. Wraps BiRefNet for the auto path and GroundingDINO + SAM for text-prompted segmentation ("remove everything except the hardware"). Same script works as a CLI, a uv-runnable file, a Python module, and a Gradio server. Fully AI-generated code — I directed the work and tested the outputs but didn\'t write it by hand. Listing it because it ships and it works, and pretending I wrote Python ML glue from scratch would be a lie.',
     },
     {
-      title: "Real Estate App",
+      title: "And Then There's the Rest",
       content:
-        "[Next.js app|https://github.com/dorukozerr/real-estate-app/] focusing on SEO through build-time pre-rendering. Includes an admin panel with form validation via zod and react hook form. Each database entry gets pre-rendered during build for optimal search engine visibility. Clean implementation of CRUD operations with performance in mind.",
+        'Somewhere out there are too many CRUD apps to count. Frontend, backend, fullstack, server actions, JWT auth, MongoDB, the whole performance. Built like my rent depended on it (sometimes it did). They served their purpose — usually "learn this framework" or "finally understand how X works" — and now they live quietly in my GitHub like books on a shelf I\'ll never reread. Not linking them. They know what they did.',
     },
   ],
   "/contact": [

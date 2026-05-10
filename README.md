@@ -182,7 +182,7 @@ function PeopleComponent() {
   const data = Route.useLoaderData();
   return (
     <ul>
-      {data.results.map((person) => (
+      {data.results.map(person => (
         <li key={person.name}>{person.name}</li>
       ))}
     </ul>
