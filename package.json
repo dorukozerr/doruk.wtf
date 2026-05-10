@@ -9,7 +9,7 @@
     "dev": "vp dev --port 3000",
     "build": "vp build",
     "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check src",
+    "fmt:check": "oxfmt --check",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
     "preview": "vp preview",
