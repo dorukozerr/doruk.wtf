@@ -4,5 +4,6 @@
   "sortPackageJson": true,
   "sortImports": true,
   "sortTailwindcss": true,
-  "arrowParens": "avoid"
+  "arrowParens": "avoid",
+  "trailingComma": "none"
 }

@@ -94,8 +94,8 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "My App" },
-    ],
+      { title: "My App" }
+    ]
   }),
   shellComponent: ({ children }) => (
     <html lang="en">
@@ -113,7 +113,7 @@ export const Route = createRootRoute({
         <Scripts />
       </body>
     </html>
-  ),
+  )
 });
 ```
 
@@ -127,7 +127,7 @@ TanStack Start provides server functions that allow you to write server-side cod
 import { createServerFn } from "@tanstack/react-start";
 
 const getServerTime = createServerFn({
-  method: "GET",
+  method: "GET"
 }).handler(async () => {
   return new Date().toISOString();
 });
@@ -155,9 +155,9 @@ import { json } from "@tanstack/react-start";
 export const Route = createFileRoute("/api/hello")({
   server: {
     handlers: {
-      GET: () => json({ message: "Hello, World!" }),
-    },
-  },
+      GET: () => json({ message: "Hello, World!" })
+    }
+  }
 });
 ```
 
@@ -175,7 +175,7 @@ export const Route = createFileRoute("/people")({
     const response = await fetch("https://swapi.dev/api/people");
     return response.json();
   },
-  component: PeopleComponent,
+  component: PeopleComponent
 });
 
 function PeopleComponent() {

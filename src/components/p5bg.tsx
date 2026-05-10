@@ -8,11 +8,11 @@ import { linearMap } from "#/helpers/linear-map";
 const circleSizes = [2584, 1597, 987, 610, 377, 233, 144, 89, 55, 34, 21, 13, 8, 5, 3, 2, 1];
 
 const rgbValues = Array.from({ length: circleSizes.length }).map((_, index) =>
-  linearMap(index + 1, 1, circleSizes.length, 0, 255 / 6),
+  linearMap(index + 1, 1, circleSizes.length, 0, 255 / 6)
 );
 
 const alphaValues = Array.from({ length: circleSizes.length }).map((_, index) =>
-  linearMap(index + 1, 1, circleSizes.length, 255, 0),
+  linearMap(index + 1, 1, circleSizes.length, 255, 0)
 );
 
 export const P5BG = () => {
@@ -20,7 +20,7 @@ export const P5BG = () => {
   const {
     isHovered,
     proximity,
-    dimensions: { width, height },
+    dimensions: { width, height }
   } = useWindowCTX();
 
   const setup = (p5: p5Types, canvasParentRef: Element) =>

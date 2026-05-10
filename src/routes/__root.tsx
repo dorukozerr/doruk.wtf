@@ -33,7 +33,7 @@ export const Route = createRootRoute({
       { name: "author", content: "Doruk Özer <dorukozer@protonmail.com>" },
       {
         name: "keywords",
-        content: "doruk, developer, portfolio, personal website, abyss, fibonacci",
+        content: "doruk, developer, portfolio, personal website, abyss, fibonacci"
       },
       { name: "theme-color", content: "#000000" },
       { property: "og:type", content: "website" },
@@ -45,14 +45,14 @@ export const Route = createRootRoute({
       { property: "twitter:url", content: "https://doruk.wtf/" },
       { property: "twitter:title", content: "Welcome to my Abyss" },
       { property: "twitter:description", content: "Fibonacci is beautiful isn't it?" },
-      { property: "twitter:image", content: "https://doruk.wtf/og-image.png" },
+      { property: "twitter:image", content: "https://doruk.wtf/og-image.png" }
     ],
     links: [
       { rel: "stylesheet", href: css },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "manifest", href: "/manifest.json" },
-      { rel: "canonical", href: "https://doruk.wtf/" },
-    ],
+      { rel: "canonical", href: "https://doruk.wtf/" }
+    ]
   }),
-  shellComponent: RootDocument,
+  shellComponent: RootDocument
 });

@@ -16,7 +16,7 @@ export const Layout = () => {
 
   const {
     dimensions: { height, width },
-    isHovered,
+    isHovered
   } = useWindowCTX();
 
   const [ch, setCH] = useState(height);
@@ -25,7 +25,7 @@ export const Layout = () => {
   const top = useSpring(scrollY, {
     stiffness: 500,
     damping: 80,
-    mass: 5,
+    mass: 5
   });
 
   useLayoutEffect(() => {
