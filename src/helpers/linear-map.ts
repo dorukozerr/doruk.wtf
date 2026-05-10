@@ -17,7 +17,7 @@ export const linearMap = (
   inMin: number,
   inMax: number,
   outMin: number,
-  outMax: number,
+  outMax: number
 ) =>
   (value * (outMin - outMax)) / (inMax - inMin) +
   (-inMin * (outMin - outMax)) / (inMin - inMax) +

@@ -11,8 +11,8 @@ export const sidebarVariants: Variants = {
     transition: {
       type: "spring",
       stiffness: 20,
-      restDelta: 2,
-    },
+      restDelta: 2
+    }
   }),
   closed: {
     clipPath: "circle(30px at 41px 38px)",
@@ -20,34 +20,34 @@ export const sidebarVariants: Variants = {
       delay: 0.2,
       type: "spring",
       stiffness: 400,
-      damping: 40,
-    },
-  },
+      damping: 40
+    }
+  }
 };
 
 export const navVariants: Variants = {
   open: { transition: { staggerChildren: 0.07, delayChildren: 0.2 } },
-  closed: { transition: { staggerChildren: 0.05, staggerDirection: -1 } },
+  closed: { transition: { staggerChildren: 0.05, staggerDirection: -1 } }
 };
 
 export const navItemVariants: Variants = {
   open: {
     y: 0,
     opacity: 1,
-    transition: { y: { stiffness: 1000, velocity: -100 } },
+    transition: { y: { stiffness: 1000, velocity: -100 } }
   },
   closed: {
     y: 50,
     opacity: 0,
-    transition: { y: { stiffness: 1000 } },
-  },
+    transition: { y: { stiffness: 1000 } }
+  }
 };
 
 export const MobileSidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navigate = useNavigate();
   const {
-    dimensions: { height },
+    dimensions: { height }
   } = useWindowCTX();
 
   return (
@@ -99,7 +99,7 @@ const Path = (props: { d?: string; variants: Variants; transition?: { duration: 
 
 const SidebarToggleButton = ({
   isOpen,
-  setIsOpen,
+  setIsOpen
 }: {
   isOpen: boolean;
   setIsOpen: (_newState: boolean) => void;
@@ -117,21 +117,21 @@ const SidebarToggleButton = ({
         <Path
           variants={{
             closed: { d: "M 2 2.5 L 20 2.5" },
-            open: { d: "M 3 16.5 L 17 2.5" },
+            open: { d: "M 3 16.5 L 17 2.5" }
           }}
         />
         <Path
           d="M 2 9.423 L 20 9.423"
           variants={{
             closed: { opacity: 1 },
-            open: { opacity: 0 },
+            open: { opacity: 0 }
           }}
           transition={{ duration: 0.1 }}
         />
         <Path
           variants={{
             closed: { d: "M 2 16.346 L 20 16.346" },
-            open: { d: "M 3 2.5 L 17 16.346" },
+            open: { d: "M 3 2.5 L 17 16.346" }
           }}
         />
       </svg>

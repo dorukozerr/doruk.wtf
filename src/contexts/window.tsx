@@ -20,7 +20,7 @@ export const WindowCTXProvider = ({ children }: { children: ReactNode }) => {
   const triggerRef = useRef<HTMLButtonElement>(null);
   const [dimensions, setDimensions] = useState({
     width: window.document.documentElement.clientWidth,
-    height: window.document.documentElement.clientHeight,
+    height: window.document.documentElement.clientHeight
   });
   const [mousePosition, setPosition] = useState({ x: 999, y: 999 });
   const [proximity, setProximity] = useState(0);
@@ -30,7 +30,7 @@ export const WindowCTXProvider = ({ children }: { children: ReactNode }) => {
     const onResize = () =>
       setDimensions({
         width: document.documentElement.clientWidth,
-        height: document.documentElement.clientHeight,
+        height: document.documentElement.clientHeight
       });
 
     window.addEventListener("resize", onResize);
@@ -77,30 +77,30 @@ export const WindowCTXProvider = ({ children }: { children: ReactNode }) => {
 
       const currentDistance = Math.sqrt(
         Math.pow(mousePosition.x - elementCenterX, 2) +
-          Math.pow(mousePosition.y - elementCenterY, 2),
+          Math.pow(mousePosition.y - elementCenterY, 2)
       );
 
       const distanceToTopLeft = Math.sqrt(
-        Math.pow(elementCenterX, 2) + Math.pow(elementCenterY, 2),
+        Math.pow(elementCenterX, 2) + Math.pow(elementCenterY, 2)
       );
 
       const distanceToTopRight = Math.sqrt(
-        Math.pow(width - elementCenterX, 2) + Math.pow(elementCenterY, 2),
+        Math.pow(width - elementCenterX, 2) + Math.pow(elementCenterY, 2)
       );
 
       const distanceToBottomLeft = Math.sqrt(
-        Math.pow(elementCenterX, 2) + Math.pow(height - elementCenterY, 2),
+        Math.pow(elementCenterX, 2) + Math.pow(height - elementCenterY, 2)
       );
 
       const distanceToBottomRight = Math.sqrt(
-        Math.pow(width - elementCenterX, 2) + Math.pow(height - elementCenterY, 2),
+        Math.pow(width - elementCenterX, 2) + Math.pow(height - elementCenterY, 2)
       );
 
       const maxDistance = Math.max(
         distanceToTopLeft,
         distanceToTopRight,
         distanceToBottomLeft,
-        distanceToBottomRight,
+        distanceToBottomRight
       );
 
       const proximityValue = linearMap(currentDistance, 0, maxDistance, 0, 1);

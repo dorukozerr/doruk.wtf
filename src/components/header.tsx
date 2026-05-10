@@ -14,7 +14,7 @@ export const Header = () => {
 
   const {
     triggerRef,
-    dimensions: { width },
+    dimensions: { width }
   } = useWindowCTX();
 
   useEffect(() => {
@@ -23,7 +23,7 @@ export const Header = () => {
 
       setDimensions({
         width: buttonRef.current.clientWidth,
-        left: rect ? rect.right - rect.width - 16 : 9999,
+        left: rect ? rect.right - rect.width - 16 : 9999
       });
     }
   }, [pathname, width]);
@@ -50,13 +50,13 @@ export const Header = () => {
             className="absolute bottom-4 h-px bg-white"
             animate={{
               width: dimensions.width,
-              left: dimensions.left,
+              left: dimensions.left
             }}
             transition={{
               type: "spring",
               stiffness: 150,
               damping: 12.5,
-              bounce: 1,
+              bounce: 1
             }}
           />
         </div>

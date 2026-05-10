@@ -37,7 +37,7 @@ export const renderRichText = (input: string): ReactNode[] => {
         >
           {label}
         </Link>
-      ),
+      )
     );
 
     lastIndex = match.index + full.length;

@@ -16,7 +16,7 @@ export const Layout = () => {
 
   const {
     dimensions: { height, width },
-    isHovered,
+    isHovered
   } = useWindowCTX();
 
   const [ch, setCH] = useState(height);
@@ -25,7 +25,7 @@ export const Layout = () => {
   const top = useSpring(scrollY, {
     stiffness: 500,
     damping: 80,
-    mass: 5,
+    mass: 5
   });
 
   useLayoutEffect(() => {
@@ -44,7 +44,7 @@ export const Layout = () => {
     <div ref={container} className="relative h-full w-full overflow-x-hidden overflow-y-auto">
       <motion.div
         className="absolute left-0 flex h-full w-full items-center justify-center overflow-visible"
-        key={width + width}
+        key={width + height}
         style={{ top }}
       >
         <P5BG />

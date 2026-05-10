@@ -7,7 +7,7 @@ import { defineConfig } from "vite-plus";
 
 const config = defineConfig({
   staged: {
-    "*": "vp check --fix",
+    "*": "vp check --fix"
   },
   fmt: {},
   lint: { options: { typeAware: true, typeCheck: true } },
@@ -17,8 +17,8 @@ const config = defineConfig({
     cloudflare({ viteEnvironment: { name: "ssr" } }),
     tailwindcss(),
     tanstackStart(),
-    viteReact(),
-  ],
+    viteReact()
+  ]
 });
 
 export default config;
