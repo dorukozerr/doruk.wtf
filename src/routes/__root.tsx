@@ -50,7 +50,6 @@ export const Route = createRootRoute({
     links: [
       { rel: "stylesheet", href: css },
       { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-      { rel: "apple-touch-icon", type: "image/svg+xml", href: "/favicon.svg" },
       { rel: "manifest", href: "/manifest.json" },
       { rel: "canonical", href: "https://doruk.wtf/" },
     ],
