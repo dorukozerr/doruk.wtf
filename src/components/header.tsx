@@ -6,27 +6,33 @@ import { useWindowCTX } from "#/contexts/window";
 import { links } from "#/static/links";
 
 export const Header = () => {
+  const [whoCares, setWhoCares] = useState("no-one");
   const buttonRef = useRef<HTMLButtonElement>(null);
-  const [dimensions, setDimensions] = useState({ width: 0, left: 9999 });
+  const [buttonInfo, setButtonInfo] = useState({ width: 46, left: 9999 });
 
   const { pathname } = useLocation();
   const navigate = useNavigate();
 
   const {
     triggerRef,
-    dimensions: { width }
+    dimensions: { width },
   } = useWindowCTX();
 
   useEffect(() => {
     if (buttonRef.current) {
       const rect = buttonRef.current.getClientRects()[0];
 
-      setDimensions({
+      setButtonInfo({
         width: buttonRef.current.clientWidth,
-        left: rect ? rect.right - rect.width - 16 : 9999
+        left: rect ? rect.right - rect.width - 16 : 9999,
       });
     }
-  }, [pathname, width]);
+  }, [pathname, width, whoCares]);
+
+  useEffect(() => {
+    const timeout = setTimeout(() => setWhoCares("me"), 1000);
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <header className="fixed top-0 left-0 z-20 hidden w-full items-center justify-center p-4 text-white md:flex">
@@ -48,16 +54,8 @@ export const Header = () => {
           <motion.div
             key="headerActiveLinkLine"
             className="absolute bottom-4 h-px bg-white"
-            animate={{
-              width: dimensions.width,
-              left: dimensions.left
-            }}
-            transition={{
-              type: "spring",
-              stiffness: 150,
-              damping: 12.5,
-              bounce: 1
-            }}
+            animate={{ width: buttonInfo.width, left: buttonInfo.left }}
+            transition={{ type: "spring", stiffness: 150, damping: 12.5, bounce: 1 }}
           />
         </div>
       </div>

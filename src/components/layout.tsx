@@ -16,17 +16,13 @@ export const Layout = () => {
 
   const {
     dimensions: { height, width },
-    isHovered
+    isHovered,
   } = useWindowCTX();
 
   const [ch, setCH] = useState(height);
 
   const { scrollY } = useScroll({ container });
-  const top = useSpring(scrollY, {
-    stiffness: 500,
-    damping: 80,
-    mass: 5
-  });
+  const top = useSpring(scrollY, { stiffness: 500, damping: 80, mass: 5 });
 
   useLayoutEffect(() => {
     if (container.current) {
@@ -37,16 +33,11 @@ export const Layout = () => {
 
   useLayoutEffect(() => {
     container.current?.scrollTo({ top: 0, behavior: "smooth" });
-    top.jump(0);
   }, [pathname, top]);
 
   return (
     <div ref={container} className="relative h-full w-full overflow-x-hidden overflow-y-auto">
-      <motion.div
-        className="absolute left-0 flex h-full w-full items-center justify-center overflow-visible"
-        key={width + height}
-        style={{ top }}
-      >
+      <motion.div className="absolute top-0 left-0 flex h-full w-full" style={{ top }}>
         <P5BG />
       </motion.div>
       {isHovered ? null : <Outlet />}
