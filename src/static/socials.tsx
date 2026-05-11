@@ -5,7 +5,7 @@ const iconProps = {
   width: 48,
   height: 48,
   strokeWidth: 0.75,
-  className: "cursor-pointer text-white/80 transition-all duration-300 hover:text-white"
+  className: "cursor-pointer text-white/80 transition-all duration-300 hover:text-white",
 };
 
 export const Twitch = (props: SVGProps<SVGSVGElement>) => (
@@ -28,27 +28,27 @@ export const Twitch = (props: SVGProps<SVGSVGElement>) => (
 export const socials = [
   {
     icon: <Github {...iconProps} />,
-    linkProps: { href: "https://github.com/dorukozerr/", target: "_blank" }
+    linkProps: { href: "https://github.com/dorukozerr/", target: "_blank" },
   },
   {
     icon: <Twitch {...iconProps} />,
-    linkProps: { href: "https://www.twitch.tv/d0ruk0z3r", target: "_blank" }
+    linkProps: { href: "https://www.twitch.tv/d0ruk0z3r", target: "_blank" },
   },
   {
     icon: <Twitter {...iconProps} />,
-    linkProps: { href: "https://x.com/dorukozerrr", target: "_blank" }
+    linkProps: { href: "https://x.com/dorukozerrr", target: "_blank" },
   },
   {
     icon: <Linkedin {...iconProps} />,
     linkProps: {
       href: "https://www.linkedin.com/in/dorukozer/",
-      target: "_blank"
-    }
+      target: "_blank",
+    },
   },
   {
     icon: <Mail {...iconProps} />,
     linkProps: {
-      href: "mailto:dorukozer@protonmail.com?subject=Found your email from doruk.wtf"
-    }
-  }
+      href: "mailto:dorukozer@protonmail.com?subject=Found your email from doruk.wtf",
+    },
+  },
 ];

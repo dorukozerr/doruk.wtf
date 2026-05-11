@@ -8,11 +8,11 @@ import { linearMap } from "#/helpers/linear-map";
 const circleSizes = [2584, 1597, 987, 610, 377, 233, 144, 89, 55, 34, 21, 13, 8, 5, 3, 2, 1];
 
 const rgbValues = Array.from({ length: circleSizes.length }).map((_, index) =>
-  linearMap(index + 1, 1, circleSizes.length, 0, 255 / 6)
+  linearMap(index + 1, 1, circleSizes.length, 0, 255 / 6),
 );
 
 const alphaValues = Array.from({ length: circleSizes.length }).map((_, index) =>
-  linearMap(index + 1, 1, circleSizes.length, 255, 0)
+  linearMap(index + 1, 1, circleSizes.length, 255, 0),
 );
 
 export const P5BG = () => {
@@ -20,7 +20,7 @@ export const P5BG = () => {
   const {
     isHovered,
     proximity,
-    dimensions: { width, height }
+    dimensions: { width, height },
   } = useWindowCTX();
 
   const setup = (p5: p5Types, canvasParentRef: Element) =>
@@ -39,7 +39,7 @@ export const P5BG = () => {
       p5.vertex(x, y);
       xoff1 += 0.05;
     }
-    setYOff(prev => prev + 0.01);
+    setYOff((prev) => prev + 0.01);
     p5.vertex(width, height);
     p5.vertex(0, height);
     p5.endShape(p5.CLOSE);
@@ -51,13 +51,13 @@ export const P5BG = () => {
       p5.vertex(x, y);
       xoff2 += 0.5;
     }
-    setYOff(prev => prev + 0.01);
+    setYOff((prev) => prev + 0.01);
     p5.vertex(width, height);
     p5.vertex(0, height);
     p5.endShape(p5.CLOSE);
     p5.noStroke();
     circleSizes
-      .filter(s => s < height)
+      .filter((s) => s < height)
       .forEach((size, index) => {
         const rgbValue = rgbValues[index];
         const alphaValue = isHovered
@@ -74,7 +74,7 @@ export const P5BG = () => {
       p5.vertex(x, y);
       xoff3 += 0.1;
     }
-    setYOff(prev => prev + 0.01);
+    setYOff((prev) => prev + 0.01);
     p5.vertex(width, height);
     p5.vertex(0, height);
     p5.endShape(p5.CLOSE);

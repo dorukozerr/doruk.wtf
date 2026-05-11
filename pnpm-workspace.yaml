@@ -1,0 +1,9 @@
+allowBuilds:
+  esbuild: true
+  react-p5: true
+  sharp: true
+  workerd: true
+overrides:
+  esbuild: latest
+  undici: latest
+  ws: latest

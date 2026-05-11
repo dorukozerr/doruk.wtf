@@ -1,7 +1,6 @@
 @import "tailwindcss";
 @import "@fontsource/iosevka-aile/100.css";
 @import "@fontsource/iosevka-aile/400.css";
-@plugin "@tailwindcss/typography";
 
 @layer base {
   * {

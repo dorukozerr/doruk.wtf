@@ -1,0 +1,4 @@
+{
+  "css.lint.importStatement": "ignore",
+  "css.lint.unknownAtRules": "ignore"
+}

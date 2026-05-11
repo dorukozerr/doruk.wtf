@@ -1,7 +1,5 @@
-import { useLocation } from "@tanstack/react-router";
-import { Outlet } from "@tanstack/react-router";
-import { useSpring } from "motion/react";
-import { motion, useScroll } from "motion/react";
+import { Outlet, useLocation } from "@tanstack/react-router";
+import { useSpring, motion, useScroll } from "motion/react";
 import { useLayoutEffect, useRef, useState } from "react";
 
 import { Footer } from "#/components/footer";

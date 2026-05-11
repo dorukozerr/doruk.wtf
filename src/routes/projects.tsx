@@ -6,5 +6,5 @@ const Projects = () => <Page path="/projects" />;
 
 export const Route = createFileRoute("/projects")({
   component: Projects,
-  head: () => ({ meta: [{ title: "Please don't judge" }] })
+  head: () => ({ meta: [{ title: "Please don't judge" }] }),
 });

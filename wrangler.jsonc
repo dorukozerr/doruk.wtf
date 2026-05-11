@@ -7,11 +7,11 @@
   "routes": [
     {
       "pattern": "doruk.wtf",
-      "custom_domain": true
+      "custom_domain": true,
     },
     {
       "pattern": "www.doruk.wtf",
-      "custom_domain": true
-    }
-  ]
+      "custom_domain": true,
+    },
+  ],
 }
