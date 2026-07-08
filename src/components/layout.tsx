@@ -30,7 +30,9 @@ export const Layout = () => {
   }, [ch, height, width, pathname]);
 
   useLayoutEffect(() => {
-    container.current?.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(() => {
+      container.current?.scrollTo({ top: 0, behavior: "smooth" });
+    }, 100);
   }, [pathname, top]);
 
   return (

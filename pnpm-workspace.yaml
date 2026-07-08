@@ -4,8 +4,9 @@ allowBuilds:
   sharp: true
   workerd: true
   p5: true
-  "@types/p5": set this to true or false
+  "@types/p5": true
 overrides:
   esbuild: latest
   undici: latest
   ws: latest
+  "@types/p5": "^1.7.0"
