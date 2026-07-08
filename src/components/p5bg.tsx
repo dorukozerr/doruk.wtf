@@ -1,4 +1,4 @@
-import p5Types from "p5";
+import type P5 from "p5";
 import { useState } from "react";
 import Sketch from "react-p5";
 
@@ -23,10 +23,10 @@ export const P5BG = () => {
     dimensions: { width, height },
   } = useWindowCTX();
 
-  const setup = (p5: p5Types, canvasParentRef: Element) =>
+  const setup = (p5: P5, canvasParentRef: Element) =>
     p5.createCanvas(width, height).parent(canvasParentRef);
 
-  const draw = (p5: p5Types) => {
+  const draw = (p5: P5) => {
     let xoff1 = 0;
     let xoff2 = 0;
     let xoff3 = 0;
@@ -80,7 +80,7 @@ export const P5BG = () => {
     p5.endShape(p5.CLOSE);
   };
 
-  const windowResized = (p5: p5Types) => p5.resizeCanvas(width, height);
+  const windowResized = (p5: P5) => p5.resizeCanvas(width, height);
 
   return <Sketch setup={setup} draw={draw} windowResized={windowResized} />;
 };

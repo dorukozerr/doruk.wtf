@@ -3,6 +3,8 @@ allowBuilds:
   react-p5: true
   sharp: true
   workerd: true
+  p5: true
+  "@types/p5": set this to true or false
 overrides:
   esbuild: latest
   undici: latest

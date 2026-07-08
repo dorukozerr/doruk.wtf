@@ -26,32 +26,32 @@ export const content = {
     {
       title: "kisuke.vim",
       content:
-        "A [Vim plugin|https://github.com/dorukozerr/kisuke.vim] for chatting with AI models inside the editor. TypeScript server talks to a VimScript client over stdin/stdout with JSON payloads. Handles multi-session history, file context marking, and multiple providers (Anthropic, OpenAI, Google, Grok). Taught me a lot about IPC and standard streams.",
+        "A [Vim plugin|https://github.com/dorukozerr/kisuke.vim] for chatting with AI models inside the editor. A small TypeScript server and a VimScript client passing JSON over stdin/stdout. Supports session history, marking files as context, and a few providers (Anthropic, OpenAI, Google, Grok). Nothing fancy, but I learned a bit about IPC building it.",
     },
     {
       title: "coc-zshell",
       content:
-        "[Coc.nvim extension|https://github.com/dorukozerr/coc-zshell] that brings zsh autocompletions into Vim by intercepting completions from a pseudo zsh shell. The trick was getting zsh's completion system to talk to something that wasn't a real terminal. Sources and prior art credited in the README.",
+        "[Coc.nvim extension|https://github.com/dorukozerr/coc-zshell] that shows zsh autocompletions in Vim. It just runs zsh in a pseudo terminal and reads the completions from there. Mostly built on top of other people's work, sources and prior art are credited in the README.",
     },
     {
       title: "fzf-clipboard",
       content:
-        "[fzf wrapper|https://github.com/dorukozerr/fzf-clipboard] for searching clipboard history. Background process collects entries, fzf surfaces them. Lives in my dotfiles and earns its keep.",
+        "[fzf wrapper|https://github.com/dorukozerr/fzf-clipboard] for searching clipboard history. A simple script, a background process saves entries and fzf lists them. Lives in my dotfiles and I use it daily.",
     },
     {
       title: "Video Diary App",
       content:
-        "A [React Native app|https://github.com/dorukozerr/video-diary/] for trimming videos and saving them as diary entries. Custom scrubber wired into the video player for tighter playback control, ffmpeg handling the processing, TanStack Query + Zustand + Zod + React Hook Form for the data layer. Small UI, interesting pipeline underneath.",
+        "A [React Native app|https://github.com/dorukozerr/video-diary/] for trimming videos and saving them as diary entries. ffmpeg does the actual processing, on top of that there is a custom scrubber and the usual data layer (TanStack Query, Zustand, Zod, React Hook Form). An okeyish app with a decent stack and structure.",
     },
     {
       title: "birefnet-sandbox",
       content:
-        'A [Python sandbox|https://github.com/dorukozerr/birefnet-sandbox] for background removal. Wraps BiRefNet for the auto path and GroundingDINO + SAM for text-prompted segmentation ("remove everything except the hardware"). Same script works as a CLI, a uv-runnable file, a Python module, and a Gradio server. Fully AI-generated code — I directed the work and tested the outputs but didn\'t write it by hand. Listing it because it ships and it works, and pretending I wrote Python ML glue from scratch would be a lie.',
+        "A [Python sandbox|https://github.com/dorukozerr/birefnet-sandbox] for background removal. It just wraps existing models, BiRefNet for the automatic path and GroundingDINO + SAM for text-prompted segmentation. Can be used as a CLI, a Python module, or a Gradio server. Full disclosure: the code is AI-generated. I directed and tested it, I didn't write it by hand, and the real work belongs to the model authors.",
     },
     {
       title: "And Then There's the Rest",
       content:
-        'Somewhere out there are too many CRUD apps to count. Frontend, backend, fullstack, server actions, JWT auth, MongoDB, the whole performance. Built like my rent depended on it (sometimes it did). They served their purpose — usually "learn this framework" or "finally understand how X works" — and now they live quietly in my GitHub like books on a shelf I\'ll never reread. Not linking them. They know what they did.',
+        "Beyond these there is a pile of experimental, half-finished stuff. Apps built with tRPC, Next.js with a decent server actions setup, Tamagui on React Native and web, TanStack Start, Redux Toolkit Query, TanStack Query with Zustand, some three.js experiments, and so on. Most of them were built to learn the stack in question, and honestly in the end it is all the same thing. Most are not public, but some of it is on my GitHub if you go digging.",
     },
   ],
   "/contact": [

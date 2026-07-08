@@ -6,15 +6,17 @@
     "#/*": "./src/*"
   },
   "scripts": {
-    "dev": "vp dev --port 3000",
-    "build": "vp build",
-    "fmt": "oxfmt",
-    "fmt:check": "oxfmt --check",
+    "fmt": "oxfmt --check",
+    "fmt:fix": "oxfmt",
     "lint": "oxlint",
     "lint:fix": "oxlint --fix",
+    "type-check": "tsc --noEmit",
+    "pre-commit": "pnpm run fmt:fix && pnpm run lint:fix && pnpm run type-check",
+    "cf-typegen": "wrangler types",
+    "serve": "vp dev --port 3000",
     "preview": "vp preview",
-    "deploy": "bun run build && wrangler deploy",
-    "prepare": "vp config"
+    "build": "vp build",
+    "deploy": "bun run build && wrangler deploy"
   },
   "dependencies": {
     "@cloudflare/vite-plugin": "^1.26.0",
@@ -33,6 +35,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "@types/p5": "^1.7.7",
     "@types/react": "^19.2.0",
     "@types/react-dom": "^19.2.0",
     "@vitejs/plugin-react": "^6.0.1",
@@ -49,11 +52,5 @@
     "vite": "npm:@voidzero-dev/vite-plus-core@latest",
     "vitest": "npm:@voidzero-dev/vite-plus-test@latest"
   },
-  "packageManager": "pnpm@11.5.3",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild",
-      "lightningcss"
-    ]
-  }
+  "packageManager": "pnpm@11.5.3"
 }
