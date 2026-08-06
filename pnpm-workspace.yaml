@@ -5,8 +5,27 @@ allowBuilds:
   workerd: true
   p5: true
   "@types/p5": true
+
+# Don't install anything published less than 7 days ago (value is in minutes).
+# Most malicious-publish incidents are caught and unpublished within hours.
+minimumReleaseAge: 10080
+
+# Fail the install if a dependency wants to run a build script and isn't in
+# allowBuilds, instead of silently skipping it with a warning.
+strictDepBuilds: true
+
+# Refuse to run package scripts when node_modules has drifted from the lockfile.
+verifyDepsBeforeRun: error
+
+# Fail when a package's publish trust evidence regresses (trusted publisher ->
+# provenance only -> nothing). A strong signal of a stolen maintainer token.
+trustPolicy: no-downgrade
+# ...but only for recent publishes. Older packages predate provenance and would
+# otherwise trip this constantly (90 days, in minutes).
+trustPolicyIgnoreAfter: 129600
+
 overrides:
-  esbuild: latest
-  undici: latest
-  ws: latest
+  # miniflare (via wrangler + @cloudflare/vite-plugin) pulls undici <7.29.0,
+  # which has open advisories. 7.29.0 is the patched release.
+  undici: "^7.29.0"
   "@types/p5": "^1.7.0"
