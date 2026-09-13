@@ -2,6 +2,7 @@ import { useLocation, useNavigate } from '@tanstack/react-router'
 import { motion } from 'motion/react'
 import { useEffectEvent, useEffect, useRef, useState } from 'react'
 
+import { AudioPlayer } from '#/components/audio-player'
 import { useWindowCTX } from '#/contexts/window'
 import { links } from '#/static/links'
 
@@ -62,6 +63,7 @@ export const Header = () => {
           />
         </div>
       </div>
+      <AudioPlayer />
     </header>
   )
 }

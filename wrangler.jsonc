@@ -5,13 +5,8 @@
   "compatibility_flags": ["nodejs_compat"],
   "main": "@tanstack/react-start/server-entry",
   "routes": [
-    {
-      "pattern": "doruk.wtf",
-      "custom_domain": true
-    },
-    {
-      "pattern": "www.doruk.wtf",
-      "custom_domain": true
-    }
-  ]
+    { "pattern": "doruk.wtf", "custom_domain": true },
+    { "pattern": "www.doruk.wtf", "custom_domain": true }
+  ],
+  "r2_buckets": [{ "binding": "WTFDORUK_BUCKET", "bucket_name": "wtfdoruk", "remote": true }]
 }
