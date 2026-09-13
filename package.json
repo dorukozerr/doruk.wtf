@@ -13,7 +13,7 @@
     "type-check": "tsc --noEmit",
     "pre-commit": "pnpm run fmt:fix && pnpm run lint:fix && pnpm run type-check",
     "cf-typegen": "wrangler types",
-    "serve": "vp dev --port 3000",
+    "serve": "vp dev ",
     "preview": "vp preview",
     "build": "vp build",
     "deploy": "bun run build && wrangler deploy"

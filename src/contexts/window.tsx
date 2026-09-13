@@ -26,8 +26,8 @@ export const WindowCTXProvider = ({ children }: { children: ReactNode }) => {
 
   const triggerRef = useRef<HTMLButtonElement>(null);
   const [dimensions, setDimensions] = useState({
-    width: window.document.documentElement.clientWidth,
-    height: window.document.documentElement.clientHeight,
+    width: window.document.documentElement.getBoundingClientRect().width,
+    height: window.document.documentElement.offsetHeight,
   });
   const [mousePosition, setPosition] = useState({ x: 999, y: 999 });
   const [proximity, setProximity] = useState(0);
