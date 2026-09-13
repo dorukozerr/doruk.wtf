@@ -19,14 +19,14 @@
     "deploy": "bun run build && wrangler deploy"
   },
   "dependencies": {
-    "@cloudflare/vite-plugin": "^1.48.0",
+    "@cloudflare/vite-plugin": "^1.54.4",
     "@fontsource/iosevka-aile": "^5.3.0",
     "@tailwindcss/vite": "^4.3.3",
     "@tanstack/react-router": "latest",
     "@tanstack/react-router-ssr-query": "latest",
     "@tanstack/react-start": "latest",
-    "@tanstack/router-plugin": "^1.168.23",
-    "iconoir-react": "^7.11.1",
+    "@tanstack/router-plugin": "^1.168.35",
+    "iconoir-react": "^7.12.1",
     "motion": "^12.43.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
@@ -36,16 +36,16 @@
   "devDependencies": {
     "@types/node": "^22.20.1",
     "@types/p5": "^1.7.7",
-    "@types/react": "^19.2.17",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.4",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
     "oxfmt": "^0.48.0",
-    "oxlint": "^1.76.0",
+    "oxlint": "^1.81.0",
     "oxlint-tsgolint": "^0.22.1",
     "typescript": "^6.0.3",
-    "vite": "npm:@voidzero-dev/vite-plus-core@^0.2.6",
+    "vite": "npm:@voidzero-dev/vite-plus-core@^0.2.9",
     "vite-plus": "latest",
-    "wrangler": "^4.115.0"
+    "wrangler": "^4.129.0"
   },
   "overrides": {
     "vite": "npm:@voidzero-dev/vite-plus-core@latest"
