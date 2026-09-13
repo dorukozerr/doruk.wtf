@@ -69,7 +69,7 @@ export const P5BG = () => {
     p5.fill(0);
     p5.beginShape();
     for (let x = 0; x <= width; x += 10) {
-      const magnifierValue = p5.map(proximity, 0, 1, 1, 0.4);
+      const magnifierValue = p5.map(proximity, 0, 1, 1, isHovered ? 0.7 : 0.85 * proximity);
       const y = p5.map(p5.noise(xoff3, yOff), 0, magnifierValue, height / 24, height);
       p5.vertex(x, y);
       xoff3 += 0.1;
