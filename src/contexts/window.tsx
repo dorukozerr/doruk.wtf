@@ -17,6 +17,10 @@ export const WindowCTX = createContext<
       isHovered: boolean
       mousePosition: { x: number; y: number }
       dimensions: { width: number; height: number }
+      endHovered: () => void
+      hasInteracted: boolean
+      volume: number
+      setVolume: (volume: number) => void
     }
   | undefined
 >(undefined)
@@ -34,6 +38,22 @@ export const WindowCTXProvider = ({ children }: { children: ReactNode }) => {
   const [mousePosition, setPosition] = useState({ x: 999, y: 999 })
   const [proximity, setProximity] = useState(0)
   const [isHovered, setIsHovered] = useState(false)
+  const [isLocked, setIsLocked] = useState(false)
+  const [hasInteracted, setHasInteracted] = useState(false)
+  const [volume, setVolume] = useState(0.05)
+
+  const endHovered = () => {
+    setIsHovered(false)
+    setIsLocked(true)
+  }
+
+  useEffect(() => {
+    const onInteract = () => setHasInteracted(true)
+
+    document.addEventListener('pointerdown', onInteract, { once: true })
+
+    return () => document.removeEventListener('pointerdown', onInteract)
+  }, [])
 
   useEffect(() => {
     const onResize = () =>
@@ -72,7 +92,13 @@ export const WindowCTXProvider = ({ children }: { children: ReactNode }) => {
         mousePosition.y >= rect.top &&
         mousePosition.y <= rect.bottom
 
-      setIsHovered(isDirectlyOver)
+      if (isDirectlyOver) {
+        if (!isLocked) {
+          setIsHovered(true)
+        }
+      } else {
+        setIsLocked(false)
+      }
 
       if (isDirectlyOver) {
         setProximity(1)
@@ -109,10 +135,22 @@ export const WindowCTXProvider = ({ children }: { children: ReactNode }) => {
     }
 
     checkHover()
-  }, [mousePosition, triggerRef, dimensions])
+  }, [isLocked, mousePosition, triggerRef, dimensions])
 
   return (
-    <WindowCTX.Provider value={{ dimensions, isHovered, mousePosition, proximity, triggerRef }}>
+    <WindowCTX.Provider
+      value={{
+        dimensions,
+        endHovered,
+        hasInteracted,
+        isHovered,
+        mousePosition,
+        proximity,
+        setVolume,
+        triggerRef,
+        volume
+      }}
+    >
       {children}
     </WindowCTX.Provider>
   )

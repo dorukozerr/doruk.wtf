@@ -26,6 +26,7 @@ export const Route = createRootRoute({
   head: () => ({
     links: [
       { href: css, rel: 'stylesheet' },
+      { as: 'audio', href: '/api/bad-apple', rel: 'preload' },
       { href: '/favicon.svg', rel: 'icon', type: 'image/svg+xml' },
       { href: '/manifest.json', rel: 'manifest' },
       { href: 'https://doruk.wtf/', rel: 'canonical' }
