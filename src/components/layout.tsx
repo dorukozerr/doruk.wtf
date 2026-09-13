@@ -37,8 +37,10 @@ export const Layout = () => {
 
   return (
     <div ref={container} className="relative h-full w-full overflow-x-hidden overflow-y-auto">
-      <motion.div className="absolute top-0 left-0 flex h-full w-full" style={{ top }}>
-        <P5BG />
+      <motion.div className="absolute top-0 left-0 flex h-full w-full">
+        <motion.div className="absolute top-0 left-0 flex h-full w-full" style={{ top }}>
+          <P5BG />
+        </motion.div>
       </motion.div>
       {isHovered ? null : <Outlet />}
       <Header />
