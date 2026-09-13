@@ -52,12 +52,8 @@ export const Layout = () => {
   return (
     <div
       ref={container}
-      className='relative h-full w-full scrollbar-thumb-black scrollbar-track-red-500 scrollbar-gutter-stable overflow-x-hidden overflow-y-auto'
+      className='relative h-full w-full scrollbar-none overflow-x-hidden overflow-y-auto'
     >
-      {/* Scrollbar must be hidden, because it breaks the aesthetics, it can be
-          customized on chrome but firefox/safari and on Mac/Windows/Linux idk
-          its not looking like what I want so its better to hide it */}
-      <div className='fixed left-1/2 h-full w-[150%] -translate-x-1/2 bg-black' />
       <div className='fixed h-full w-full overflow-hidden'>
         <motion.div className='absolute inset-0 bg-red-500' style={{ top }}>
           <P5BG />
