@@ -119,7 +119,7 @@ export const P5BG = () => {
   const windowResized = (p5: P5) => p5.resizeCanvas(W, H)
 
   return (
-    <div ref={container} className='flex h-full w-full items-center justify-center bg-pink-100'>
+    <div ref={container} className='flex h-full w-full items-center justify-center bg-black'>
       <Sketch
         key={`P5BG-${W}-${H}`}
         setup={setup}

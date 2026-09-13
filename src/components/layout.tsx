@@ -22,10 +22,10 @@ export const Layout = () => {
   const scrollVelocity = useVelocity(scrollY)
 
   const smoothVelocity = useSpring(scrollVelocity, {
-    damping: 100,
-    mass: 10,
-    stiffness: 500,
-    velocity: 200
+    damping: 20,
+    mass: 1,
+    stiffness: 200,
+    velocity: 0
   })
 
   const top = useTransform(smoothVelocity, [-1500, 1500], [height, -height], { clamp: false })
@@ -53,13 +53,16 @@ export const Layout = () => {
     <div
       ref={container}
       className='relative h-full w-full scrollbar-none overflow-x-hidden overflow-y-auto'
+      style={{ overflowY: isHovered ? 'hidden' : 'auto' }}
     >
       <div className='fixed h-full w-full overflow-hidden'>
-        <motion.div className='absolute inset-0 bg-red-500' style={{ top }}>
+        <motion.div className='absolute inset-0' style={{ top }}>
           <P5BG />
         </motion.div>
       </div>
-      {isHovered ? null : <Outlet />}
+      <div className='w-full' style={{ opacity: isHovered ? 0 : 100 }}>
+        <Outlet />
+      </div>
       <Header />
       <MobileSidebar />
       <Footer />

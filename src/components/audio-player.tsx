@@ -7,11 +7,13 @@ export const AudioPlayer = () => {
   const isHoveredRef = useRef(false)
   const { isHovered, hasInteracted, volume } = useWindowCTX()
 
-  // oxlint-disable-next-line react/refs
-  isHoveredRef.current = isHovered
+  useEffect(() => {
+    isHoveredRef.current = isHovered
+  }, [isHovered])
 
   useEffect(() => {
     const audio = audioRef.current
+
     if (audio) audio.volume = volume
   }, [volume])
 
@@ -20,13 +22,16 @@ export const AudioPlayer = () => {
 
     if (!audio) return
 
-    const prime = () =>
+    const prime = () => {
       void audio
         .play()
         .then(() => {
-          if (!isHoveredRef.current) audio.pause()
+          if (!isHoveredRef.current) {
+            audio.pause()
+          }
         })
         .catch(() => {})
+    }
 
     document.addEventListener('pointerdown', prime, { once: true })
 

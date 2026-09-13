@@ -59,7 +59,9 @@ export const Header = () => {
           className='flex cursor-pointer items-center justify-center'
           onClick={endHovered}
         >
-          <h1 className='text-4xl font-thin'>{isHovered ? 'doruk WTF stop' : 'doruk'}</h1>
+          <h1 className='text-4xl font-thin'>
+            {isHovered ? (hasInteracted ? 'doruk WTF stop it' : 'I need a mouse click') : 'doruk'}
+          </h1>
         </button>
         {isHovered ? (
           <div className='flex items-center gap-4'>
