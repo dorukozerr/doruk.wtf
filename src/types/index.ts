@@ -1,5 +1,5 @@
 // Page Section
 export interface PS {
-  title: string;
-  content: string;
+  title: string
+  content: string
 }

@@ -1,16 +1,23 @@
-import { defineConfig } from "oxlint";
+import { defineConfig } from 'oxlint'
 
+// If I had self respect I would enable commented out stuff
 export default defineConfig({
-  ignorePatterns: ["./src/routeTree.gen"],
   categories: {
-    correctness: "error",
-    // WOWWW
-    // perf: "error", style: "error"
+    correctness: 'error'
+    // perf: 'error', style: 'error'
   },
+  ignorePatterns: ['./src/routeTree.gen'],
   options: { typeAware: true, typeCheck: true },
-  plugins: ["typescript", "react", "react-perf"],
+  plugins: [
+    'typescript',
+    'import',
+    'react'
+    // 'oxc', 'unicorn', 'react-perf'
+  ],
   rules: {
-    "arrow-body-style": "error",
-    "no-duplicate-imports": "error",
-  },
-});
+    'arrow-body-style': 'error',
+    'no-duplicate-imports': 'error',
+    'one-var': 'off',
+    'sort-keys': 'error'
+  }
+})

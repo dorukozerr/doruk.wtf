@@ -4,7 +4,7 @@ allowBuilds:
   sharp: true
   workerd: true
   p5: true
-  "@types/p5": true
+  '@types/p5': true
 
 # Don't install anything published less than 7 days ago (value is in minutes).
 # Most malicious-publish incidents are caught and unpublished within hours.
@@ -27,5 +27,5 @@ trustPolicyIgnoreAfter: 129600
 overrides:
   # miniflare (via wrangler + @cloudflare/vite-plugin) pulls undici <7.29.0,
   # which has open advisories. 7.29.0 is the patched release.
-  undici: "^7.29.0"
-  "@types/p5": "^1.7.0"
+  undici: '^7.29.0'
+  '@types/p5': '^1.7.0'

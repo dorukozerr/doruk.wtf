@@ -1,6 +1,6 @@
-@import "tailwindcss";
-@import "@fontsource/iosevka-aile/100.css";
-@import "@fontsource/iosevka-aile/400.css";
+@import 'tailwindcss';
+@import '@fontsource/iosevka-aile/100.css';
+@import '@fontsource/iosevka-aile/400.css';
 
 @layer base {
   * {
@@ -15,7 +15,7 @@
   }
 
   @theme inline {
-    --font-sans: "Iosevka Aile", sans-serif;
-    --font-mono: "Iosevka Aile", monospace;
+    --font-sans: 'Iosevka Aile', sans-serif;
+    --font-mono: 'Iosevka Aile', monospace;
   }
 }
