@@ -9,18 +9,16 @@ export const sidebarVariants: Variants = {
   closed: {
     clipPath: 'circle(30px at 41px 38px)',
     transition: {
-      damping: 40,
-      delay: 0.2,
-      stiffness: 400,
-      type: 'spring'
+      delay: 0.35,
+      duration: 1,
+      ease: [0.65, 0, 0.35, 1]
     }
   },
   open: (height = 1000) => ({
     clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
     transition: {
-      restDelta: 2,
-      stiffness: 20,
-      type: 'spring'
+      duration: 1,
+      ease: [0.65, 0, 0.35, 1]
     }
   })
 }
@@ -65,7 +63,7 @@ export const MobileSidebar = () => {
           className='w-75'
         >
           <motion.div
-            className='absolute top-0 bottom-0 left-0 w-75 bg-white/10 backdrop-blur-xs'
+            className='absolute top-0 bottom-0 left-0 w-75 bg-white/30'
             variants={sidebarVariants}
           />
           <motion.ul
@@ -75,7 +73,7 @@ export const MobileSidebar = () => {
             {links.map(({ to, label }, index) => (
               <motion.button
                 key={`mobileNavLink-${index}`}
-                className='pointer-events-auto flex cursor-pointer items-center justify-start p-0 text-xl text-white'
+                className='pointer-events-auto flex cursor-pointer items-center justify-start p-0 text-xl font-bold text-black'
                 variants={navItemVariants}
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.95 }}

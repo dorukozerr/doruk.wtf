@@ -45,14 +45,12 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 left-0 z-20 hidden w-full items-center justify-center p-4 transition-colors duration-500 md:flex ${
-        isHovered ? 'text-black' : 'text-white'
-      }`}
+      className='fixed top-0 left-0 z-20 hidden w-full items-center justify-center p-4 transition-colors duration-500 md:flex'
+      style={{ color: isHovered ? '#000' : '#fff' }}
     >
       <div
-        className={`flex h-full w-full items-center justify-between rounded-md px-8 py-4 backdrop-blur-2xl transition-colors duration-500 ${
-          isHovered ? 'bg-black/20' : 'bg-white/10'
-        }`}
+        className='flex h-full w-full items-center justify-between rounded-md px-8 py-4 backdrop-blur-2xl transition-colors duration-500'
+        style={{ backgroundColor: isHovered ? 'rgba(0,0,0,0.2)' : 'rgba(0,0,0,0.5)' }}
       >
         <button
           ref={triggerRef}
@@ -88,9 +86,8 @@ export const Header = () => {
               <button
                 key={`desktopNavLink-${index}`}
                 ref={pathname === to ? buttonRef : null}
-                className={`transion-all cursor-pointer text-lg duration-500 ${
-                  location.pathname === to ? 'text-white' : 'text-white/60'
-                }`}
+                className='transion-all cursor-pointer text-lg duration-500'
+                style={{ color: location.pathname === to ? '#fff' : 'rgba(255,255,255,0.6)' }}
                 onClick={() => navigate({ to })}
               >
                 {label}
