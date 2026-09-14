@@ -3,12 +3,13 @@ import type { PS } from '#/types'
 export const content = {
   '/': [
     {
-      content: 'Welcome to my digital playground. Scroll down if curiosity gets the better of you.',
+      content:
+        "Welcome to my website but I really don't know what to write in terms of content. I built this website with love and joy but I don't know how to write. But it has some surprises >.<",
       title: 'Hello, Friend'
     },
     {
       content:
-        'A small window into things I build. No fluff, no buzzwords, mostly experimental stuff. The [projects section|/projects] is where the interesting bits live.',
+        'I mean there is projects section which I slightly feel better in terms of what to write, but maybe if you scrolled down here you can hover my name on header. I had fun while building it.',
       title: 'About This Place'
     }
   ],
@@ -21,7 +22,7 @@ export const content = {
   '/projects': [
     {
       content:
-        "Things I've built when I should have probably been sleeping. Some are useful, some are just experiments. Judge them gently.",
+        '3 50+ hour zero to hero JS bootcamps, countless youtube project code alongs, recreating some of the projects and changing content + styles. The only thing I want to say is that the person I feel closest to is Might Duy from Naruto, father of Might Guy xd',
       title: 'Wall of Shame'
     },
     {
@@ -31,33 +32,33 @@ export const content = {
     },
     {
       content:
-        'A [Vim plugin|https://github.com/dorukozerr/kisuke.vim] for chatting with AI models inside the editor. A small TypeScript server and a VimScript client passing JSON over stdin/stdout. Supports session history, marking files as context, and a few providers (Anthropic, OpenAI, Google, Grok). Nothing fancy, but I learned a bit about IPC building it.',
+        "A [Vim plugin|https://github.com/dorukozerr/kisuke.vim] I did really get ultra excited about this one, tried to build this with claude while knowing completely nothing about vim script. It was a failure but there was data communication. Read the learn vim script the hard way book and gained almost nothing, rawdogged my way with inefficiency and mediocrity. Decided to delete the whole project claude created but I learned how to create IPC communication between Vim and a TypeScript server, I mean idk, it was fun, also wanted to mention that this project evolved into something that supports a premature mcp server and client and updated the system prompt to my goth gf, it's not in main branch tho.",
       title: 'kisuke.vim'
     },
     {
       content:
-        "[Coc.nvim extension|https://github.com/dorukozerr/coc-zshell] that shows zsh autocompletions in Vim. It just runs zsh in a pseudo terminal and reads the completions from there. Mostly built on top of other people's work, sources and prior art are credited in the README.",
+        "[Coc.nvim extension|https://github.com/dorukozerr/coc-zshell] for zsh completions while being really SUS. I mean only thing about this project is that I did not try to vibe code a questionable product or something. I chose to spend my tokens on something that's more questionable. The zsh script I copied with 5% understanding is pure art. Right now I have 15% understanding.",
       title: 'coc-zshell'
     },
     {
       content:
-        '[fzf wrapper|https://github.com/dorukozerr/fzf-clipboard] for searching clipboard history. A simple script, a background process saves entries and fzf lists them. Lives in my dotfiles and I use it daily.',
+        '[fzf wrapper|https://github.com/dorukozerr/fzf-clipboard] clipboard explorer in cli. I really needed this one. Even though it was working perfectly, I made AI rewrite it multiple times, I wrote down my observations and assumptions on shell script and brainstormed with AI because I wanted to learn more about shell scripts.',
       title: 'fzf-clipboard'
     },
     {
       content:
-        'A [React Native app|https://github.com/dorukozerr/video-diary/] for trimming videos and saving them as diary entries. ffmpeg does the actual processing, on top of that there is a custom scrubber and the usual data layer (TanStack Query, Zustand, Zod, React Hook Form). An okeyish app with a decent stack and structure.',
+        "A [React Native app|https://github.com/dorukozerr/video-diary/] with ffmpeg, there was no AI in this, I fully wrote it manually with my inexplicable linter preferences. Built a video player with fully custom controllers + playback management. This was a case study, they really liked the project but I didn't get the job.",
       title: 'Video Diary App'
     },
     {
       content:
-        "A [Python sandbox|https://github.com/dorukozerr/birefnet-sandbox] for background removal. It just wraps existing models, BiRefNet for the automatic path and GroundingDINO + SAM for text-prompted segmentation. Can be used as a CLI, a Python module, or a Gradio server. Full disclosure: the code is AI-generated. I directed and tested it, I didn't write it by hand, and the real work belongs to the model authors.",
+        "A [Python sandbox|https://github.com/dorukozerr/birefnet-sandbox] that was fully personal playground experiment project. I downloaded a model from hugging face for the first time. I hadn't touched python before so I used AI to convert my TS snippets and desired structure into python modules. It ended up in a nice composable way.",
       title: 'birefnet-sandbox'
     },
     {
       content:
-        'Beyond these there is a pile of experimental, half-finished stuff. Apps built with tRPC, Next.js with a decent server actions setup, Tamagui on React Native and web, TanStack Start, Redux Toolkit Query, TanStack Query with Zustand, some three.js experiments, and so on. Most of them were built to learn the stack in question, and honestly in the end it is all the same thing. Most are not public, but some of it is on my GitHub if you go digging.',
-      title: "And Then There's the Rest"
+        'My friends tell me not to put content like this and that it would affect my professional life in a bad way. I even learned from a friend that some manager at some company reviewed my profile and said it\'s better for him to work on small scale startups :ddddd I think I talked with AI around 15~ hours total on a regular basis about the domain of this website, for example, please email me <dorukozer@protonmail.com> if you think I\'m making a mistake. My favorite book series was A Series of Unfortunate Events, it had identical openings and intros everywhere like "If you are interested in stories with happy endings, you would be better off reading some other book. In this book, not only is there no happy ending, there is no happy beginning, and very few happy things in the middle." I kinda liked that vibe a lot.',
+      title: 'Future source of shame material'
     }
   ]
 } satisfies Record<string, PS[]>
