@@ -1,49 +1,71 @@
-import { Outlet, useLocation } from "@tanstack/react-router";
-import { useSpring, motion, useScroll } from "motion/react";
-import { useLayoutEffect, useRef, useState } from "react";
+import { Outlet, useLocation } from '@tanstack/react-router'
+import { motion, useScroll, useSpring, useTransform, useVelocity } from 'motion/react'
+import { useEffectEvent, useLayoutEffect, useRef, useState } from 'react'
 
-import { Footer } from "#/components/footer";
-import { Header } from "#/components/header";
-import { MobileSidebar } from "#/components/mobile-sidebar";
-import { P5BG } from "#/components/p5bg";
-import { useWindowCTX } from "#/contexts/window";
+import { Footer } from '#/components/footer'
+import { Header } from '#/components/header'
+import { MobileSidebar } from '#/components/mobile-sidebar'
+import { P5BG } from '#/components/p5bg'
+import { useWindowCTX } from '#/contexts/window'
 
 export const Layout = () => {
-  const container = useRef<HTMLDivElement>(null);
-  const { pathname } = useLocation();
+  const container = useRef<HTMLDivElement>(null)
+  const { pathname } = useLocation()
 
   const {
     dimensions: { height, width },
-    isHovered,
-  } = useWindowCTX();
+    isHovered
+  } = useWindowCTX()
 
-  const [ch, setCH] = useState(height);
+  const [ch, setCH] = useState(height)
+  const { scrollY } = useScroll({ container })
+  const scrollVelocity = useVelocity(scrollY)
 
-  const { scrollY } = useScroll({ container });
-  const top = useSpring(scrollY, { stiffness: 500, damping: 80, mass: 5 });
+  const smoothVelocity = useSpring(scrollVelocity, {
+    damping: 20,
+    mass: 1,
+    stiffness: 200,
+    velocity: 0
+  })
 
-  useLayoutEffect(() => {
+  const top = useTransform(smoothVelocity, [-1500, 1500], [height, -height], { clamp: false })
+
+  const syncScrollContainer = useEffectEvent(() => {
     if (container.current) {
-      const containerHeight = container.current.getBoundingClientRect().height;
-      if (height !== ch) setCH(containerHeight);
+      const containerHeight = container.current.getBoundingClientRect().height
+      if (height !== ch) setCH(containerHeight)
     }
-  }, [ch, height, width, pathname]);
+  })
 
   useLayoutEffect(() => {
-    setTimeout(() => {
-      container.current?.scrollTo({ top: 0, behavior: "smooth" });
-    }, 100);
-  }, [pathname, top]);
+    syncScrollContainer()
+    // Intentionally triggering rerender just to be safe, P5 bg layer and
+    // Circle page sections aligns perfectly if there is no mismatch, on window
+    // Resizes it was kinda breaking before. Also contact page is not
+    // Scrollable, triggering rerender on path change fixes that too
+  }, [ch, height, width, pathname])
+
+  useLayoutEffect(() => {
+    setTimeout(() => container.current?.scrollTo({ behavior: 'smooth', top: 0 }), 100)
+  }, [pathname])
 
   return (
-    <div ref={container} className="relative h-full w-full overflow-x-hidden overflow-y-auto">
-      <motion.div className="absolute top-0 left-0 flex h-full w-full" style={{ top }}>
-        <P5BG />
-      </motion.div>
-      {isHovered ? null : <Outlet />}
+    <div
+      ref={container}
+      className='relative h-full w-full scrollbar-none overflow-x-hidden overflow-y-auto'
+      style={{ overflowY: isHovered ? 'hidden' : 'auto' }}
+    >
+      <div className='fixed h-full w-full overflow-hidden'>
+        <motion.div className='absolute inset-0' style={{ top }}>
+          <P5BG />
+        </motion.div>
+      </div>
+      <div className='w-full' style={{ opacity: isHovered ? 0 : 100 }}>
+        <Outlet />
+      </div>
       <Header />
       <MobileSidebar />
       <Footer />
     </div>
-  );
-};
+  )
+}

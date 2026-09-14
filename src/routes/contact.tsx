@@ -1,9 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute } from '@tanstack/react-router'
 
-import { Page } from "#/components/page";
+import { Page } from '#/components/page'
 
-const Contact = () => <Page path="/contact" />;
+const Contact = () => <Page path='/contact' />
 
-export const Route = createFileRoute("/contact")({
-  component: Contact,
-});
+export const Route = createFileRoute('/contact')({
+  component: Contact
+})
