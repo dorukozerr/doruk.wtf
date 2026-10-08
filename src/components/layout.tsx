@@ -1,6 +1,6 @@
-import { Outlet, useLocation } from '@tanstack/react-router'
+import { Outlet, useLocation, useRouterState } from '@tanstack/react-router'
 import { motion, useScroll, useSpring, useTransform, useVelocity } from 'motion/react'
-import { useEffectEvent, useLayoutEffect, useRef, useState } from 'react'
+import { useEffect, useEffectEvent, useLayoutEffect, useRef, useState } from 'react'
 
 import { Footer } from '#/components/footer'
 import { Header } from '#/components/header'
@@ -11,6 +11,7 @@ import { useWindowCTX } from '#/contexts/window'
 export const Layout = () => {
   const container = useRef<HTMLDivElement>(null)
   const { pathname } = useLocation()
+  const resolvedPathname = useRouterState({ select: (s) => s.resolvedLocation?.pathname })
 
   const {
     dimensions: { height, width },
@@ -33,7 +34,7 @@ export const Layout = () => {
   const syncScrollContainer = useEffectEvent(() => {
     if (container.current) {
       const containerHeight = container.current.getBoundingClientRect().height
-      if (height !== ch) setCH(containerHeight)
+      if (containerHeight !== ch) setCH(containerHeight)
     }
   })
 
@@ -45,9 +46,14 @@ export const Layout = () => {
     // Scrollable, triggering rerender on path change fixes that too
   }, [ch, height, width, pathname])
 
-  useLayoutEffect(() => {
-    setTimeout(() => container.current?.scrollTo({ behavior: 'smooth', top: 0 }), 100)
-  }, [pathname])
+  useEffect(() => {
+    const c = container.current
+    if (!c) return
+
+    const frame = requestAnimationFrame(() => c.scrollTo({ behavior: 'smooth', top: 0 }))
+
+    return () => cancelAnimationFrame(frame)
+  }, [resolvedPathname])
 
   return (
     <div
