@@ -10,7 +10,9 @@ export const Footer = () => {
         isHovered ? 'bg-black/30' : 'bg-linear-to-r from-white/10 to-black/50'
       }`}
     >
-      <span className={`text-lg transition-colors duration-500 ${isHovered ? 'text-black' : 'text-white'}`}>
+      <span
+        className={`text-lg transition-colors duration-500 ${isHovered ? 'text-black' : 'text-white'}`}
+      >
         Made with {isHovered ? '🔥' : '❤️'} and
       </span>
       <VimIcon width={22} height={22} color={isHovered ? '#000' : '#fff'} />

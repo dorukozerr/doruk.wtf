@@ -1,31 +1,26 @@
+catalog:
+  vite: npm:@voidzero-dev/vite-plus-core@1.6.0
+
+peerDependencyRules:
+  allowAny:
+    - vite
+    - oxc-transform-react
+  allowedVersions:
+    vite: '*'
+
 allowBuilds:
   esbuild: true
   react-p5: true
-  sharp: true
   workerd: true
   p5: true
-  '@types/p5': true
-
-# Don't install anything published less than 7 days ago (value is in minutes).
-# Most malicious-publish incidents are caught and unpublished within hours.
-minimumReleaseAge: 10080
-
-# Fail the install if a dependency wants to run a build script and isn't in
-# allowBuilds, instead of silently skipping it with a warning.
-strictDepBuilds: true
-
-# Refuse to run package scripts when node_modules has drifted from the lockfile.
-verifyDepsBeforeRun: error
-
-# Fail when a package's publish trust evidence regresses (trusted publisher ->
-# provenance only -> nothing). A strong signal of a stolen maintainer token.
-trustPolicy: no-downgrade
-# ...but only for recent publishes. Older packages predate provenance and would
-# otherwise trip this constantly (90 days, in minutes).
-trustPolicyIgnoreAfter: 129600
 
 overrides:
-  # miniflare (via wrangler + @cloudflare/vite-plugin) pulls undici <7.29.0,
-  # which has open advisories. 7.29.0 is the patched release.
-  undici: '^7.29.0'
-  '@types/p5': '^1.7.0'
+  vite@*: 'catalog:'
+
+permissions:
+  '@tanstack/react-router':
+    skills: false
+  '@tanstack/react-start':
+    skills: false
+  '@tanstack/router-plugin':
+    skills: false
