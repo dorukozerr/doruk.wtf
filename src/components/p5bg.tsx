@@ -1,6 +1,5 @@
-import type P5 from 'p5'
 import { useEffectEvent, useLayoutEffect, useRef, useState } from 'react'
-import Sketch from 'react-p5'
+import Sketch, { type SketchProps } from 'react-p5'
 
 import { useWindowCTX } from '#/contexts/window'
 import { linearMap } from '#/helpers/linear-map'
@@ -65,9 +64,10 @@ export const P5BG = () => {
 
   const invert = (value: number) => (isHovered ? 255 - value : value)
 
-  const setup = (p5: P5, canvasParentRef: Element) => p5.createCanvas(W, H).parent(canvasParentRef)
+  const setup: SketchProps['setup'] = (p5, canvasParentRef: Element) =>
+    p5.createCanvas(W, H).parent(canvasParentRef)
 
-  const draw = (p5: P5) => {
+  const draw: SketchProps['draw'] = (p5) => {
     let XOFF_1 = 0
     let XOFF_2 = 0
     let XOFF_3 = 0
@@ -172,7 +172,8 @@ export const P5BG = () => {
     }
   }
 
-  const windowResized = (p5: P5) => p5.resizeCanvas(W, H)
+  const windowResized: SketchProps['windowResized'] = (p5) => p5.resizeCanvas(W, H)
+  const deviceEvent: SketchProps['deviceTurned'] = (p5) => p5.resizeCanvas(W, H)
 
   return (
     <div
@@ -185,8 +186,8 @@ export const P5BG = () => {
         setup={setup}
         draw={draw}
         windowResized={windowResized}
-        deviceTurned={windowResized}
-        deviceMoved={windowResized}
+        deviceTurned={deviceEvent}
+        deviceMoved={deviceEvent}
       />
     </div>
   )
